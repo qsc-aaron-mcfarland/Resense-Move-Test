@@ -1,0 +1,45 @@
+# Pin Reference
+
+| Pin Display Name | Pin Script Name | Category | Notes |
+|---|---|---|---|
+| CPU Temperature | iws_cpu_temp | Device Info | |
+| Dewpoint | iws_dewpoint | Sensor | |
+| Framework Version | iws_framework_version | Device Info | |
+| Hostname | iws_hostname | Device Info | |
+| Humidity | iws_humidity | Sensor | Unit: % |
+| Identify | iws_id_trigger | Device Control | |
+| Kernel Version | iws_kernel_version | Device Info | |
+| LED Brightness | iws_led_brightness | LED | |
+| LED Color | iws_led_color | LED | |
+| LED Enable | iws_led_enabled | LED | |
+| LED Pattern | iws_led_pattern | LED | |
+| LED Speed | iws_led_speed | LED | |
+| Luminosity | iws_luminosity | Sensor | Unit: Lux, Range: 0-4000 |
+| Model ID | iws_model_id | Device Info | |
+| Motherboard Temperature | iws_mobo_temp | Device Info | |
+| Occupancy State | iws_occupancy_state | Sensor | Boolean |
+| Occupancy Timeout | iws_occupancy_timeout | Sensor Config | |
+| People Count | iws_people_count | Sensor | Integer |
+| Poll Rate | iws_poll_rate | Device Config | |
+| Presence Zone 1 Enabled | iws_inclusion_zone_0_enable | Presence Zone | |
+| Presence Zone 1 Name | iws_inclusion_zone_0_name | Presence Zone | |
+| Presence Zone 1 Presence | iws_inclusion_zone_0_presence | Presence Zone | |
+| Presence Zone 2 Enabled | iws_inclusion_zone_1_enable | Presence Zone | |
+| Presence Zone 2 Name | iws_inclusion_zone_1_name | Presence Zone | |
+| Presence Zone 2 Presence | iws_inclusion_zone_1_presence | Presence Zone | |
+| Presence Zone 3 Enabled | iws_inclusion_zone_2_enable | Presence Zone | |
+| Presence Zone 3 Name | iws_inclusion_zone_2_name | Presence Zone | |
+| Presence Zone 3 Presence | iws_inclusion_zone_2_presence | Presence Zone | |
+| Presence Zone 4 Enabled | iws_inclusion_zone_3_enable | Presence Zone | |
+| Presence Zone 4 Name | iws_inclusion_zone_3_name | Presence Zone | |
+| Presence Zone 4 Presence | iws_inclusion_zone_3_presence | Presence Zone | |
+| Presence Zone 5 Enabled | iws_inclusion_zone_4_enable | Presence Zone | |
+| Presence Zone 5 Name | iws_inclusion_zone_4_name | Presence Zone | |
+| Presence Zone 5 Presence | iws_inclusion_zone_4_presence | Presence Zone | |
+| Sound Level | iws_sound_level | Sensor | Unit: dBA |
+| Status | iws_status | Device Info | |
+| Sensor Group | iws_sensor_group | Group | |
+| System Uptime | iws_system_uptime | Device Info | |
+| Temperature | iws_temperature | Sensor | Unit: °C, Range: +5 to +35°C |
+| TVOC | iws_tvoc | Sensor | Unit: ppm, Range: 0-100 |
+| Zone JSON | iws_zone_json | Presence Zone | Full zone data as JSON |
