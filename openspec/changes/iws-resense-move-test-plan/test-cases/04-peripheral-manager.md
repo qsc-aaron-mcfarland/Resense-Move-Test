@@ -1,6 +1,6 @@
 # Peripheral Manager Test Cases
 
-## IWS - Verify device appears in Peripheral Manager discovery
+## 04.a - IWS - Verify device appears in Peripheral Manager discovery
 
 | Field | Details |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## IWS - Commission a discovered IWS device
+## 04.b - IWS - Commission a discovered IWS device
 
 | Field | Details |
 |---|---|
@@ -24,7 +24,7 @@
 
 ---
 
-## IWS - Commission with incorrect credentials
+## 04.c - IWS - Commission with incorrect credentials
 
 | Field | Details |
 |---|---|
@@ -36,7 +36,7 @@
 
 ---
 
-## IWS - Commission with empty credentials
+## 04.d - IWS - Commission with empty credentials
 
 | Field | Details |
 |---|---|
@@ -48,7 +48,7 @@
 
 ---
 
-## IWS - Decommission a commissioned device
+## 04.e - IWS - Decommission a commissioned device
 
 | Field | Details |
 |---|---|
@@ -60,7 +60,7 @@
 
 ---
 
-## IWS - Verify firmware version displayed
+## 04.f - IWS - Verify firmware version displayed
 
 | Field | Details |
 |---|---|
@@ -72,7 +72,7 @@
 
 ---
 
-## IWS - Firmware update when update is available
+## 04.g - IWS - Firmware update when update is available
 
 | Field | Details |
 |---|---|
@@ -84,7 +84,7 @@
 
 ---
 
-## IWS - Firmware update when device is already up to date
+## 04.h - IWS - Firmware update when device is already up to date
 
 | Field | Details |
 |---|---|
@@ -96,7 +96,7 @@
 
 ---
 
-## IWS - Verify device status indicators in Peripheral Manager
+## 04.i - IWS - Verify device status indicators in Peripheral Manager
 
 | Field | Details |
 |---|---|
@@ -108,7 +108,7 @@
 
 ---
 
-## IWS - Verify Peripheral Manager status when device goes offline
+## 04.j - IWS - Verify Peripheral Manager status when device goes offline
 
 | Field | Details |
 |---|---|
@@ -120,7 +120,7 @@
 
 ---
 
-## IWS - Verify Peripheral Manager status when device comes back online
+## 04.k - IWS - Verify Peripheral Manager status when device comes back online
 
 | Field | Details |
 |---|---|
@@ -132,7 +132,7 @@
 
 ---
 
-## IWS - Assign IWS device to component in design
+## 04.l - IWS - Assign IWS device to component in design
 
 | Field | Details |
 |---|---|
@@ -144,7 +144,7 @@
 
 ---
 
-## IWS - Reassign IWS device to a different component
+## 04.m - IWS - Reassign IWS device to a different component
 
 | Field | Details |
 |---|---|
@@ -156,7 +156,7 @@
 
 ---
 
-## IWS - Verify device discovery with multiple IWS devices
+## 04.n - IWS - Verify device discovery with multiple IWS devices
 
 | Field | Details |
 |---|---|
@@ -168,7 +168,7 @@
 
 ---
 
-## IWS - Verify Peripheral Manager with device password change
+## 04.o - IWS - Verify Peripheral Manager with device password change
 
 | Field | Details |
 |---|---|

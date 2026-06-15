@@ -1,6 +1,6 @@
 # Control Pins Test Cases
 
-## IWS - Verify all control pins are listed
+## 05.a - IWS - Verify all control pins are listed
 
 | Field | Details |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## IWS - Verify "Occupancy State" control pin value
+## 05.b - IWS - Verify "Occupancy State" control pin value
 
 | Field | Details |
 |---|---|
@@ -24,7 +24,7 @@
 
 ---
 
-## IWS - Verify "People Count" control pin value
+## 05.c - IWS - Verify "People Count" control pin value
 
 | Field | Details |
 |---|---|
@@ -36,7 +36,7 @@
 
 ---
 
-## IWS - Verify "Luminosity" control pin value
+## 05.d - IWS - Verify "Luminosity" control pin value
 
 | Field | Details |
 |---|---|
@@ -48,7 +48,7 @@
 
 ---
 
-## IWS - Verify "Temperature" control pin value
+## 05.e - IWS - Verify "Temperature" control pin value
 
 | Field | Details |
 |---|---|
@@ -60,7 +60,7 @@
 
 ---
 
-## IWS - Verify "Humidity" control pin value
+## 05.f - IWS - Verify "Humidity" control pin value
 
 | Field | Details |
 |---|---|
@@ -72,7 +72,7 @@
 
 ---
 
-## IWS - Verify "Dewpoint" control pin value
+## 05.g - IWS - Verify "Dewpoint" control pin value
 
 | Field | Details |
 |---|---|
@@ -84,7 +84,7 @@
 
 ---
 
-## IWS - Verify "TVOC" control pin value
+## 05.h - IWS - Verify "TVOC" control pin value
 
 | Field | Details |
 |---|---|
@@ -96,7 +96,7 @@
 
 ---
 
-## IWS - Verify "Sound Level" control pin value
+## 05.i - IWS - Verify "Sound Level" control pin value
 
 | Field | Details |
 |---|---|
@@ -108,7 +108,7 @@
 
 ---
 
-## IWS - Verify "Status" control pin value
+## 05.j - IWS - Verify "Status" control pin value
 
 | Field | Details |
 |---|---|
@@ -120,7 +120,7 @@
 
 ---
 
-## IWS - Verify "Identify" control pin triggers device identification
+## 05.k - IWS - Verify "Identify" control pin triggers device identification
 
 | Field | Details |
 |---|---|
@@ -132,7 +132,7 @@
 
 ---
 
-## IWS - Verify "LED Brightness" control pin
+## 05.l - IWS - Verify "LED Brightness" control pin
 
 | Field | Details |
 |---|---|
@@ -144,7 +144,7 @@
 
 ---
 
-## IWS - Verify "LED Color" control pin
+## 05.m - IWS - Verify "LED Color" control pin
 
 | Field | Details |
 |---|---|
@@ -156,7 +156,7 @@
 
 ---
 
-## IWS - Verify "LED Enable" control pin
+## 05.n - IWS - Verify "LED Enable" control pin
 
 | Field | Details |
 |---|---|
@@ -168,7 +168,7 @@
 
 ---
 
-## IWS - Verify "LED Pattern" control pin
+## 05.o - IWS - Verify "LED Pattern" control pin
 
 | Field | Details |
 |---|---|
@@ -180,7 +180,7 @@
 
 ---
 
-## IWS - Verify "LED Speed" control pin
+## 05.p - IWS - Verify "LED Speed" control pin
 
 | Field | Details |
 |---|---|
@@ -192,7 +192,7 @@
 
 ---
 
-## IWS - Verify "Occupancy Timeout" control pin
+## 05.q - IWS - Verify "Occupancy Timeout" control pin
 
 | Field | Details |
 |---|---|
@@ -204,7 +204,7 @@
 
 ---
 
-## IWS - Verify "Poll Rate" control pin
+## 05.r - IWS - Verify "Poll Rate" control pin
 
 | Field | Details |
 |---|---|
@@ -216,7 +216,7 @@
 
 ---
 
-## IWS - Verify device info pins display correct values
+## 05.s - IWS - Verify device info pins display correct values
 
 | Field | Details |
 |---|---|
@@ -228,7 +228,7 @@
 
 ---
 
-## IWS - Verify "CPU Temperature" and "Motherboard Temperature" pins
+## 05.t - IWS - Verify "CPU Temperature" and "Motherboard Temperature" pins
 
 | Field | Details |
 |---|---|
@@ -240,7 +240,7 @@
 
 ---
 
-## IWS - Verify "Zone JSON" control pin outputs valid JSON
+## 05.u - IWS - Verify "Zone JSON" control pin outputs valid JSON
 
 | Field | Details |
 |---|---|
@@ -252,7 +252,7 @@
 
 ---
 
-## IWS - Verify Presence Zone control pins (per zone)
+## 05.v - IWS - Verify Presence Zone control pins (per zone)
 
 | Field | Details |
 |---|---|
@@ -264,7 +264,7 @@
 
 ---
 
-## IWS - Verify control pin values update in real-time
+## 05.w - IWS - Verify control pin values update in real-time
 
 | Field | Details |
 |---|---|
@@ -276,7 +276,7 @@
 
 ---
 
-## IWS - Verify control pin values when device is disconnected
+## 05.x - IWS - Verify control pin values when device is disconnected
 
 | Field | Details |
 |---|---|
@@ -288,7 +288,7 @@
 
 ---
 
-## IWS - Connect control pins via wiring on canvas
+## 05.y - IWS - Connect control pins via wiring on canvas
 
 | Field | Details |
 |---|---|
@@ -300,7 +300,7 @@
 
 ---
 
-## IWS - Verify control pin naming convention
+## 05.z - IWS - Verify control pin naming convention
 
 | Field | Details |
 |---|---|

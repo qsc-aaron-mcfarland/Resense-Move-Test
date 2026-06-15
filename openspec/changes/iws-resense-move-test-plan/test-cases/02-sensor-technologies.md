@@ -1,6 +1,6 @@
 # Sensor Technologies Test Cases
 
-## IWS - Verify occupancy detection status displays
+## 02.a - IWS - Verify occupancy detection status displays
 
 | Field | Details |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## IWS - Verify people count displays correctly
+## 02.b - IWS - Verify people count displays correctly
 
 | Field | Details |
 |---|---|
@@ -24,7 +24,7 @@
 
 ---
 
-## IWS - Verify people count with zero occupants
+## 02.c - IWS - Verify people count with zero occupants
 
 | Field | Details |
 |---|---|
@@ -36,7 +36,7 @@
 
 ---
 
-## IWS - Verify luminosity sensor value and unit
+## 02.d - IWS - Verify luminosity sensor value and unit
 
 | Field | Details |
 |---|---|
@@ -48,7 +48,7 @@
 
 ---
 
-## IWS - Verify luminosity sensor boundary at 0 Lux
+## 02.e - IWS - Verify luminosity sensor boundary at 0 Lux
 
 | Field | Details |
 |---|---|
@@ -60,7 +60,7 @@
 
 ---
 
-## IWS - Verify luminosity sensor boundary at max Lux
+## 02.f - IWS - Verify luminosity sensor boundary at max Lux
 
 | Field | Details |
 |---|---|
@@ -72,7 +72,7 @@
 
 ---
 
-## IWS - Verify temperature sensor value in Celsius
+## 02.g - IWS - Verify temperature sensor value in Celsius
 
 | Field | Details |
 |---|---|
@@ -84,7 +84,7 @@
 
 ---
 
-## IWS - Verify temperature sensor value in Fahrenheit
+## 02.h - IWS - Verify temperature sensor value in Fahrenheit
 
 | Field | Details |
 |---|---|
@@ -96,7 +96,7 @@
 
 ---
 
-## IWS - Verify humidity sensor value and unit
+## 02.i - IWS - Verify humidity sensor value and unit
 
 | Field | Details |
 |---|---|
@@ -108,7 +108,7 @@
 
 ---
 
-## IWS - Verify TVOC sensor value and unit
+## 02.j - IWS - Verify TVOC sensor value and unit
 
 | Field | Details |
 |---|---|
@@ -120,7 +120,7 @@
 
 ---
 
-## IWS - Verify sound level sensor value and unit
+## 02.k - IWS - Verify sound level sensor value and unit
 
 | Field | Details |
 |---|---|
@@ -132,7 +132,7 @@
 
 ---
 
-## IWS - Verify all sensor values update in near real-time
+## 02.l - IWS - Verify all sensor values update in near real-time
 
 | Field | Details |
 |---|---|
@@ -144,7 +144,7 @@
 
 ---
 
-## IWS - Verify sensor values when device is disconnected
+## 02.m - IWS - Verify sensor values when device is disconnected
 
 | Field | Details |
 |---|---|
@@ -156,7 +156,7 @@
 
 ---
 
-## IWS - Verify sensor values restore after reconnection
+## 02.n - IWS - Verify sensor values restore after reconnection
 
 | Field | Details |
 |---|---|
@@ -168,7 +168,7 @@
 
 ---
 
-## IWS - Verify dewpoint sensor value
+## 02.o - IWS - Verify dewpoint sensor value
 
 | Field | Details |
 |---|---|
@@ -180,7 +180,7 @@
 
 ---
 
-## IWS - Verify all sensor types are listed
+## 02.p - IWS - Verify all sensor types are listed
 
 | Field | Details |
 |---|---|
@@ -192,7 +192,7 @@
 
 ---
 
-## IWS - Verify sensor data with multiple IWS devices
+## 02.q - IWS - Verify sensor data with multiple IWS devices
 
 | Field | Details |
 |---|---|
@@ -204,7 +204,7 @@
 
 ---
 
-## IWS - Verify sensor data display in emulate mode
+## 02.r - IWS - Verify sensor data display in emulate mode
 
 | Field | Details |
 |---|---|
@@ -216,7 +216,7 @@
 
 ---
 
-## IWS - Verify sensor reading precision and formatting
+## 02.s - IWS - Verify sensor reading precision and formatting
 
 | Field | Details |
 |---|---|

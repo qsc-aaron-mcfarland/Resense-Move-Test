@@ -1,6 +1,6 @@
 # Detection Zones Test Cases
 
-## IWS - Verify presence zones configuration UI available
+## 06.a - IWS - Verify presence zones configuration UI available
 
 | Field | Details |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## IWS - Verify default detection zones
+## 06.b - IWS - Verify default detection zones
 
 | Field | Details |
 |---|---|
@@ -24,7 +24,7 @@
 
 ---
 
-## IWS - Add a new detection zone
+## 06.c - IWS - Add a new detection zone
 
 | Field | Details |
 |---|---|
@@ -36,7 +36,7 @@
 
 ---
 
-## IWS - Remove a detection zone
+## 06.d - IWS - Remove a detection zone
 
 | Field | Details |
 |---|---|
@@ -48,7 +48,7 @@
 
 ---
 
-## IWS - Rename a detection zone
+## 06.e - IWS - Rename a detection zone
 
 | Field | Details |
 |---|---|
@@ -60,7 +60,7 @@
 
 ---
 
-## IWS - Verify presence detection per zone
+## 06.f - IWS - Verify presence detection per zone
 
 | Field | Details |
 |---|---|
@@ -72,7 +72,7 @@
 
 ---
 
-## IWS - Verify people count per zone
+## 06.g - IWS - Verify people count per zone
 
 | Field | Details |
 |---|---|
@@ -84,7 +84,7 @@
 
 ---
 
-## IWS - Verify zone-specific control pins are exposed
+## 06.h - IWS - Verify zone-specific control pins are exposed
 
 | Field | Details |
 |---|---|
@@ -96,7 +96,7 @@
 
 ---
 
-## IWS - Verify maximum of 5 presence zones
+## 06.i - IWS - Verify maximum of 5 presence zones
 
 | Field | Details |
 |---|---|
@@ -108,7 +108,7 @@
 
 ---
 
-## IWS - Verify detection zone boundaries do not overlap error handling
+## 06.j - IWS - Verify detection zone boundaries do not overlap error handling
 
 | Field | Details |
 |---|---|
@@ -120,7 +120,7 @@
 
 ---
 
-## IWS - Verify detection zones persist after save and reopen
+## 06.k - IWS - Verify detection zones persist after save and reopen
 
 | Field | Details |
 |---|---|

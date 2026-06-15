@@ -1,6 +1,6 @@
 # LED Configuration Test Cases
 
-## IWS - Verify LED ring color control available
+## 03.a - IWS - Verify LED ring color control available
 
 | Field | Details |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## IWS - Set LED ring to a specific color
+## 03.b - IWS - Set LED ring to a specific color
 
 | Field | Details |
 |---|---|
@@ -24,7 +24,7 @@
 
 ---
 
-## IWS - Set LED ring brightness to maximum
+## 03.c - IWS - Set LED ring brightness to maximum
 
 | Field | Details |
 |---|---|
@@ -36,7 +36,7 @@
 
 ---
 
-## IWS - Set LED ring brightness to minimum
+## 03.d - IWS - Set LED ring brightness to minimum
 
 | Field | Details |
 |---|---|
@@ -48,7 +48,7 @@
 
 ---
 
-## IWS - Set LED ring brightness to midrange value
+## 03.e - IWS - Set LED ring brightness to midrange value
 
 | Field | Details |
 |---|---|
@@ -60,7 +60,7 @@
 
 ---
 
-## IWS - Turn LED ring off
+## 03.f - IWS - Turn LED ring off
 
 | Field | Details |
 |---|---|
@@ -72,7 +72,7 @@
 
 ---
 
-## IWS - Turn LED ring on after being off
+## 03.g - IWS - Turn LED ring on after being off
 
 | Field | Details |
 |---|---|
@@ -84,7 +84,7 @@
 
 ---
 
-## IWS - Cycle through multiple LED colors
+## 03.h - IWS - Cycle through multiple LED colors
 
 | Field | Details |
 |---|---|
@@ -96,7 +96,7 @@
 
 ---
 
-## IWS - Verify LED control with device disconnected
+## 03.i - IWS - Verify LED control with device disconnected
 
 | Field | Details |
 |---|---|
@@ -108,7 +108,7 @@
 
 ---
 
-## IWS - Verify LED settings via control pins
+## 03.j - IWS - Verify LED settings via control pins
 
 | Field | Details |
 |---|---|
@@ -120,7 +120,7 @@
 
 ---
 
-## IWS - Verify LED Pattern control
+## 03.k - IWS - Verify LED Pattern control
 
 | Field | Details |
 |---|---|
@@ -132,7 +132,7 @@
 
 ---
 
-## IWS - Verify LED Speed control
+## 03.l - IWS - Verify LED Speed control
 
 | Field | Details |
 |---|---|

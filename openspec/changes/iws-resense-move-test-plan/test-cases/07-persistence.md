@@ -1,6 +1,6 @@
 # Persistence Test Cases
 
-## IWS - Verify component properties persist after save and reopen
+## 07.a - IWS - Verify component properties persist after save and reopen
 
 | Field | Details |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## IWS - Verify LED configuration persists after save and reopen
+## 07.b - IWS - Verify LED configuration persists after save and reopen
 
 | Field | Details |
 |---|---|
@@ -24,7 +24,7 @@
 
 ---
 
-## IWS - Verify control pin wiring persists after save and reopen
+## 07.c - IWS - Verify control pin wiring persists after save and reopen
 
 | Field | Details |
 |---|---|
@@ -36,7 +36,7 @@
 
 ---
 
-## IWS - Verify Peripheral Manager assignment persists after save and reopen
+## 07.d - IWS - Verify Peripheral Manager assignment persists after save and reopen
 
 | Field | Details |
 |---|---|
@@ -48,7 +48,7 @@
 
 ---
 
-## IWS - Verify design with IWS component can be saved as a new file
+## 07.e - IWS - Verify design with IWS component can be saved as a new file
 
 | Field | Details |
 |---|---|
@@ -60,7 +60,7 @@
 
 ---
 
-## IWS - Verify multiple IWS components persist independently
+## 07.f - IWS - Verify multiple IWS components persist independently
 
 | Field | Details |
 |---|---|

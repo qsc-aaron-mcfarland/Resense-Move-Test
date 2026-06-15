@@ -1,6 +1,6 @@
 # Component Basics Test Cases
 
-## IWS - Verify component available in inventory
+## 01.a - IWS - Verify component available in inventory
 
 | Field | Details |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## IWS - Add component to schematic via drag and drop
+## 01.b - IWS - Add component to schematic via drag and drop
 
 | Field | Details |
 |---|---|
@@ -24,7 +24,7 @@
 
 ---
 
-## IWS - Add component via right-click context menu
+## 01.c - IWS - Add component via right-click context menu
 
 | Field | Details |
 |---|---|
@@ -36,7 +36,7 @@
 
 ---
 
-## IWS - Verify default component properties
+## 01.d - IWS - Verify default component properties
 
 | Field | Details |
 |---|---|
@@ -48,7 +48,7 @@
 
 ---
 
-## IWS - Rename component
+## 01.e - IWS - Rename component
 
 | Field | Details |
 |---|---|
@@ -60,7 +60,7 @@
 
 ---
 
-## IWS - Rename component with special characters
+## 01.f - IWS - Rename component with special characters
 
 | Field | Details |
 |---|---|
@@ -72,7 +72,7 @@
 
 ---
 
-## IWS - Rename component with maximum length name
+## 01.g - IWS - Rename component with maximum length name
 
 | Field | Details |
 |---|---|
@@ -84,7 +84,7 @@
 
 ---
 
-## IWS - Add multiple IWS components
+## 01.h - IWS - Add multiple IWS components
 
 | Field | Details |
 |---|---|
@@ -96,7 +96,7 @@
 
 ---
 
-## IWS - Delete component from design
+## 01.i - IWS - Delete component from design
 
 | Field | Details |
 |---|---|
@@ -108,7 +108,7 @@
 
 ---
 
-## IWS - Copy and paste component
+## 01.j - IWS - Copy and paste component
 
 | Field | Details |
 |---|---|
@@ -120,7 +120,7 @@
 
 ---
 
-## IWS - Double-click to open component window
+## 01.k - IWS - Double-click to open component window
 
 | Field | Details |
 |---|---|
@@ -132,7 +132,7 @@
 
 ---
 
-## IWS - Verify no license required
+## 01.l - IWS - Verify no license required
 
 | Field | Details |
 |---|---|
@@ -144,7 +144,7 @@
 
 ---
 
-## IWS - Verify Sensor Group configuration
+## 01.m - IWS - Verify Sensor Group configuration
 
 | Field | Details |
 |---|---|
@@ -156,7 +156,7 @@
 
 ---
 
-## IWS - Verify Timeout setting in minutes
+## 01.n - IWS - Verify Timeout setting in minutes
 
 | Field | Details |
 |---|---|
@@ -168,7 +168,7 @@
 
 ---
 
-## IWS - Verify Poll Rate setting in seconds
+## 01.o - IWS - Verify Poll Rate setting in seconds
 
 | Field | Details |
 |---|---|
@@ -180,7 +180,7 @@
 
 ---
 
-## IWS - Verify Status tab Network section displays device info
+## 01.p - IWS - Verify Status tab Network section displays device info
 
 | Field | Details |
 |---|---|
@@ -192,7 +192,7 @@
 
 ---
 
-## IWS - Verify ID button triggers device identification
+## 01.q - IWS - Verify ID button triggers device identification
 
 | Field | Details |
 |---|---|
@@ -204,7 +204,7 @@
 
 ---
 
-## IWS - Verify CPU Temp and Mobo Temp display
+## 01.r - IWS - Verify CPU Temp and Mobo Temp display
 
 | Field | Details |
 |---|---|
@@ -216,7 +216,7 @@
 
 ---
 
-## IWS - Verify Bluetooth is not available
+## 01.s - IWS - Verify Bluetooth is not available
 
 | Field | Details |
 |---|---|
