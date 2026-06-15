@@ -7,10 +7,8 @@
 | IWS - Verify default component properties | Component Basics | IWS-COMP-2 | QSYSDEV-58457 | IWS - Q-SYSify defaults of Resense Move | Default property values |
 | IWS - Rename component | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
 | IWS - Rename component with special characters | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
-| IWS - Rename component with maximum length name | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
 | IWS - Add multiple IWS components | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
 | IWS - Delete component from design | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
-| IWS - Copy and paste component | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
 | IWS - Double-click to open component window | Component Basics | IWS-COMP-2, IWS-DI-1 | QSYSDEV-56207 | IWS control panel (QDS) UX Implementation | Verifies 3 tabs: Status, LED Configuration, Occupancy Sensor Configuration |
 | IWS - Verify no license required | Component Basics | IWS-SW-1 | QSYSDEV-51758 | License Free IWS-SW-1 | |
 | IWS - Verify Sensor Group configuration | Component Basics | IWS-COMP-2 | QSYSDEV-56207 | IWS control panel (QDS) UX Implementation | Status tab group field |
@@ -20,6 +18,7 @@
 | IWS - Verify ID button triggers device identification | Component Basics | IWS-LED-2 | QSYSDEV-51745 | LED Configuration and Presets IWS-LED-1/2 | ID behavior: Blue, 100%, Flashing, Standard |
 | IWS - Verify CPU Temp and Mobo Temp display | Component Basics | IWS-DI-1 | QSYSDEV-56207 | IWS control panel (QDS) UX Implementation | |
 | IWS - Verify Bluetooth is not available | Component Basics | IWS-BLE-1 | QSYSDEV-53097 | Minimize resense services | Bluetooth out of scope for Phase 1; verify not exposed |
+| IWS - Verify status indicator shows Fault when device is not connected | Component Basics | IWS-ST-10 | QSYSDEV-51756 | Fault Status IWS-ST-10 | Status bar turns red with "Fault" text when device is not connected |
 | IWS - Verify occupancy detection status displays | Sensor Technologies | IWS-ST-2 | QSYSDEV-51747 | People Counting and Presence Detection Reporting & Configuration IWS-ST-2/3 | |
 | IWS - Verify people count displays correctly | Sensor Technologies | IWS-ST-2 | QSYSDEV-51747 | People Counting and Presence Detection Reporting & Configuration IWS-ST-2/3 | |
 | IWS - Verify people count with zero occupants | Sensor Technologies | IWS-ST-2 | QSYSDEV-51747 | People Counting and Presence Detection Reporting & Configuration IWS-ST-2/3 | |
