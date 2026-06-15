@@ -1,0 +1,99 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify presence zones configuration UI available	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Verify Presence Zone 1–5 controls are visible.	1. A presence zones configuration section is visible.
+2. The UI shows controls for up to 5 presence zones.
+3. Each zone has Enabled, Name, and Presence fields matching the control pins: "Presence Zone N Enabled", "Presence Zone N Name", "Presence Zone N Presence".	Manual	Designer > Components > IWS > Detection Zones
+IWS - Verify default detection zones	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Review the default zone setup.	1. A default detection zone is present covering the full sensor field of view.
+2. The zone has a default name and configuration.	Manual	Designer > Components > IWS > Detection Zones
+IWS - Add a new detection zone	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Click the <add zone> button or control.
+4. Configure the new zone (name, boundaries).	1. A new detection zone is added to the list.
+2. The zone can be named and its boundaries configured.
+3. The zone appears in the zones list.	Manual	Designer > Components > IWS > Detection Zones
+IWS - Remove a detection zone	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. At least two detection zones are configured.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Select a zone to remove.
+4. Click the <remove zone> button or control.
+5. Confirm removal if prompted.	1. The selected zone is removed from the zones list.
+2. The remaining zones are unaffected.
+3. Associated control pins for the removed zone are no longer available.	Manual	Designer > Components > IWS > Detection Zones
+IWS - Rename a detection zone	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. At least one detection zone is configured.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Select a zone and change its name to "Entrance Area".	1. The zone name updates to "Entrance Area" in the zones list.
+2. Any associated control pins update to reflect the new zone name.	Manual	Designer > Components > IWS > Detection Zones
+IWS - Verify presence detection per zone	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. Multiple detection zones are configured.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Have a person stand in the area corresponding to Zone 1 only.
+4. Observe the presence status for each zone.	1. Zone 1 shows occupied/presence detected.
+2. Other zones show unoccupied/no presence.
+3. The per-zone occupancy status updates correctly as the person moves between zones.	Manual	Designer > Components > IWS > Detection Zones
+IWS - Verify people count per zone	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. Multiple detection zones are configured.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Have a known number of people in the area corresponding to a specific zone.
+4. Observe the people count for that zone.	1. The per-zone people count reflects the approximate number of people in that zone.
+2. The count updates as people enter or leave the zone area.	Manual	Designer > Components > IWS > Detection Zones
+IWS - Verify zone-specific control pins are exposed	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. Multiple detection zones are configured (e.g., Zone 1, Zone 2).	1. Select the IWS component on Center Workspace > Canvas.
+2. Review the output control pins.
+3. Look for zone-specific pins (e.g., "Presence Zone 1 Enabled", "Presence Zone 1 Name", "Presence Zone 1 Presence").	1. Zone-specific output control pins are exposed for each configured zone.
+2. Each zone has Enabled, Name, and Presence pins.
+3. Pin names follow the pattern "Presence Zone N Enabled/Name/Presence".	Manual	Designer > Components > IWS > Detection Zones
+IWS - Verify maximum of 5 presence zones	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Enable all 5 presence zones (Presence Zone 1 through Presence Zone 5).
+4. Verify no option to add a 6th zone exists.	1. All 5 presence zones can be enabled and configured.
+2. There is no option to create additional zones beyond 5.
+3. The control pins confirm exactly 5 zone sets (Presence Zone 1–5).	Manual	Designer > Components > IWS > Detection Zones
+IWS - Verify detection zone boundaries do not overlap error handling	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. At least one detection zone is configured.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "Occupancy Sensor Configuration" tab.
+3. Add a second zone that overlaps with the first zone boundaries.	1. Either the overlap is allowed (with expected behavior documented) or the UI displays a warning/validation message about overlapping zones.
+2. If overlapping is allowed, people in the overlap area may be counted in both zones.	Manual	Designer > Components > IWS > Detection Zones
+IWS - Verify detection zones persist after save and reopen	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. Configure multiple detection zones with custom names and boundaries.	1. Save the design via Menu Bar > File > Save.
+2. Close the design.
+3. Reopen the saved design.
+4. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+5. Select the "Occupancy Sensor Configuration" tab and review zone configuration.	1. All previously configured detection zones are present.
+2. Zone names, boundaries, and settings are retained exactly as saved.
+3. Zone-specific control pins are still exposed correctly.	Manual	Designer > Components > IWS > Detection Zones

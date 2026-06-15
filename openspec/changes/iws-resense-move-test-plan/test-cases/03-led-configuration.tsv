@@ -1,0 +1,110 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify LED ring color control available	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED ring color control.	1. LED ring color control is visible on the LED Configuration tab.
+2. Color selection options are available (e.g., color picker, RGB values, or preset colors).	Manual	Designer > Components > IWS > LED Configuration
+IWS - Set LED ring to a specific color	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED Color control.
+4. Set the LED color to red (R:255, G:0, B:0 or equivalent).
+4. Observe the physical IWS device.	1. The LED ring color value updates to red in the UI.
+2. The physical IWS device LED ring illuminates red.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Set LED ring brightness to maximum	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED Brightness control.
+4. Set brightness to maximum (100%).	1. The brightness value shows 100% in the UI.
+2. The physical IWS device LED ring is at maximum brightness.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Set LED ring brightness to minimum	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED Brightness control.
+4. Set brightness to minimum (0%).	1. The brightness value shows 0% in the UI.
+2. The physical IWS device LED ring is off or at minimum brightness.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Set LED ring brightness to midrange value	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED Brightness control.
+4. Set brightness to 50%.
+5. Observe the physical IWS device.	1. The brightness value shows 50% in the UI.
+2. The physical IWS device LED ring brightness is noticeably dimmer than maximum but still illuminated.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Turn LED ring off	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. The LED ring is currently illuminated.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED Enable control.
+4. Turn the LED ring off.	1. The LED status in the UI shows off/disabled.
+2. The physical IWS device LED ring turns off completely.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Turn LED ring on after being off	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. The LED ring is currently off.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED Enable control.
+4. Turn the LED ring on.	1. The LED status in the UI shows on/enabled.
+2. The physical IWS device LED ring illuminates with the previously configured color and brightness.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Cycle through multiple LED colors	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Set the LED color to red and observe.
+3. Change the LED color to green and observe.
+4. Change the LED color to blue and observe.
+5. Change the LED color to white and observe.	1. Each color change is reflected in the UI immediately.
+2. The physical IWS device LED ring changes color to match each selection.
+3. No color bleed or artifacts from previous colors remain.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Verify LED control with device disconnected	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device was previously commissioned, then disconnected from network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Attempt to change the LED ring color.
+3. Attempt to change the LED ring brightness.	1. The UI allows modifying the LED values.
+2. The component status indicates the device is disconnected.
+3. No crash or unhandled error occurs when sending LED commands to a disconnected device.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Verify LED settings via control pins	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Select the IWS component on Center Workspace > Canvas.
+2. Verify LED-related control pins are exposed: "LED Color", "LED Brightness", "LED Enable", "LED Pattern", "LED Speed".
+3. Connect a script or control component to the LED control pins.
+4. Send values via the control pins to change color, brightness, pattern, and speed.	1. All five LED-related control pins are available and exposed on the component.
+2. Sending values via control pins changes the LED ring on the physical device.
+3. The Floating Window "Intelligent Workspace Sensor" > LED Configuration tab reflects the updated LED values.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Verify LED Pattern control	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED Pattern control.
+3. Cycle through available LED patterns.
+4. Observe the physical IWS device for each pattern.	1. Multiple LED patterns are available for selection.
+2. Each pattern produces a visually distinct effect on the physical LED ring (e.g., solid, pulse, chase, breathe).
+3. The selected pattern is reflected in the UI.	Manual	Designer > Components > IWS > LED Configuration
+IWS - Verify LED Speed control	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. LED Pattern is set to an animated pattern (not solid).	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Select the "LED Configuration" tab.
+3. Locate the LED Speed control.
+3. Set the speed to a low value and observe the LED animation.
+4. Set the speed to a high value and observe the LED animation.	1. The LED animation speed on the physical device changes with each setting.
+2. The speed change is visually noticeable.
+3. The speed value is reflected in the UI.	Manual	Designer > Components > IWS > LED Configuration

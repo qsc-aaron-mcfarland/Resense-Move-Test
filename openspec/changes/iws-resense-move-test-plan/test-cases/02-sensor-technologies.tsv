@@ -1,0 +1,150 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify occupancy detection status displays	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the Occupancy field.
+3. Observe the occupancy value with the space occupied by at least one person.	1. The occupancy indicator shows a boolean occupied/unoccupied state.
+2. The value updates in near real-time as the space becomes occupied or unoccupied.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify people count displays correctly	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the People Count field.
+3. Observe the count with a known number of people in the sensor field of view.	1. The people count displays as an integer value.
+2. The count reflects the approximate number of people detected by the thermal sensor.
+3. The value updates in near real-time.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify people count with zero occupants	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. The sensor field of view is empty (no people present).	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, observe the People Count value.	1. The people count displays 0.
+2. The occupancy status shows unoccupied.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify luminosity sensor value and unit	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the Luminosity field.
+3. Observe the displayed value and unit.	1. The luminosity value displays in Lux.
+2. The value is within the range of 0–4,000 Lux.
+3. The unit label "Lux" is shown.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify luminosity sensor boundary at 0 Lux	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. The sensor is in a completely dark environment (cover the light sensor).	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, observe the Luminosity reading.	1. The luminosity value displays 0 Lux (or near 0).
+2. No negative values are displayed.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify luminosity sensor boundary at max Lux	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. The sensor is exposed to bright light exceeding 4,000 Lux.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, observe the Luminosity reading.	1. The luminosity value caps at 4,000 Lux or displays a maximum indicator.
+2. No values above the documented maximum are shown.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify temperature sensor value in Celsius	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the Temperature field.
+3. Verify the unit is displayed as °C.	1. The temperature value displays with the °C unit.
+2. The value is within the operational range (+5°C to +35°C).
+3. The reading is plausible for the current environment.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify temperature sensor value in Fahrenheit	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the Temperature field.
+3. Change the temperature unit to °F (if unit toggle is available in properties or Floating Window).	1. The temperature value displays with the °F unit.
+2. The value is the correct Fahrenheit equivalent of the Celsius reading.
+3. The unit label updates to "°F".	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify humidity sensor value and unit	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the Humidity field.
+3. Observe the displayed value and unit.	1. The humidity value displays as a percentage (%).
+2. The value is within a plausible range (0–100%).
+3. The unit label "%" is shown.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify TVOC sensor value and unit	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the TVOC field.
+3. Observe the displayed value and unit.	1. The TVOC value displays in ppm (parts per million).
+2. The value is a non-negative number.
+3. The unit label "ppm" is shown.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify sound level sensor value and unit	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the Sound Level field.
+3. Observe the displayed value and unit.	1. The sound level value displays in dBA.
+2. The value is a non-negative number.
+3. The unit label "dBA" is shown.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify all sensor values update in near real-time	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, observe all sensor readings (Occupancy, People Count, Luminosity, temperature, humidity, TVOC, sound level).
+3. Introduce a change in the environment (e.g., turn lights on/off, enter/exit the room, make noise).
+4. Observe sensor values for updates.	1. All affected sensor values update within a few seconds of the environmental change.
+2. No sensor reading is frozen or displaying stale data.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify sensor values when device is disconnected	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device was previously commissioned and connected.	1. Disconnect the IWS device from the network (unplug Ethernet cable).
+2. Observe Floating Window "Intelligent Workspace Sensor" > Status tab > Sensor Output section readings.
+3. Observe the component status on Center Workspace > Canvas.	1. Sensor values stop updating or display a "no data" / fault indicator.
+2. The component status on the canvas changes to indicate disconnected/fault state.
+3. No crash or UI hang occurs.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify sensor values restore after reconnection	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device was previously commissioned, then disconnected.	1. Reconnect the IWS device to the network (plug Ethernet cable back in).
+2. Wait for the device to re-establish connection.
+3. Observe Floating Window "Intelligent Workspace Sensor" > Status tab > Sensor Output section readings.
+4. Observe the component status on the canvas.	1. Sensor values resume updating with live data.
+2. The component status returns to normal/connected state.
+3. No manual intervention is required to restore data flow.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify dewpoint sensor value	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, locate the Dewpoint field.
+3. Observe the displayed value.	1. The dewpoint value displays as a numeric temperature value.
+2. The value is plausible given the current temperature and humidity readings.
+3. The unit matches the configured temperature unit (°C or °F).	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify all sensor types are listed	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, review the Sensor Output section.	1. All sensor types are present: Occupancy State, People Count, Luminosity, Temperature, Dewpoint, Humidity, TVOC, Sound Level.
+2. Each sensor type has its correct unit label.
+3. No sensor types are missing.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify sensor data with multiple IWS devices	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add two IWS components to the canvas.
+4. Both IWS devices are commissioned and connected on the network.	1. Double-click the first IWS component to open Floating Window "Intelligent Workspace Sensor" for IWS 1.
+2. Double-click the second IWS component to open Floating Window "Intelligent Workspace Sensor" for IWS 2.
+3. Compare sensor readings between the two devices.	1. Each Floating Window displays independent sensor data for its respective device.
+2. Sensor values are not cross-contaminated between devices.
+3. Both windows can be open simultaneously.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify sensor data display in emulate mode	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. No physical IWS device is connected (emulate mode).	1. Run the design in emulate mode.
+2. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+3. On the Status tab, observe the Sensor Output section.	1. Sensor fields are present but may show default/zero values or "N/A".
+2. The component does not display errors for missing hardware in emulate mode.
+3. The UI remains fully navigable.	Manual	Designer > Components > IWS > Sensor Technologies
+IWS - Verify sensor reading precision and formatting	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, in the Sensor Output section, review the decimal precision of each sensor value.
+3. Note the formatting (decimal places, rounding).	1. Luminosity displays as a whole number (Lux).
+2. Temperature displays with appropriate precision (e.g., 1 decimal place).
+3. Humidity displays with appropriate precision.
+4. All values are formatted consistently and are human-readable.	Manual	Designer > Components > IWS > Sensor Technologies

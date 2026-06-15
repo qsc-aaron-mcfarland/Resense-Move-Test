@@ -1,0 +1,146 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify component available in inventory	1. Open "Q-SYS Designer" software.
+2. Create a new design.	1. Navigate to Left Sidebar > Inventory > Tree.
+2. Expand the "Peripherals" or "Sensors" category.
+3. Search for "IWS" in the inventory search field.	1. The IWS component appears in the inventory list.
+2. The component is listed with the correct Q-SYS model number and icon.	Manual	Designer > Components > IWS > Component Basics
+IWS - Add component to schematic via drag and drop	1. Open "Q-SYS Designer" software.
+2. Create a new design.	1. Navigate to Left Sidebar > Inventory > Tree.
+2. Locate the IWS component.
+3. Drag the IWS component onto Center Workspace > Canvas.	1. The IWS component node appears on the canvas.
+2. The component shows default name label (e.g., "IWS 1").
+3. Input and output pins are visible on the component node.	Manual	Designer > Components > IWS > Component Basics
+IWS - Add component via right-click context menu	1. Open "Q-SYS Designer" software.
+2. Create a new design.	1. Right-click on Center Workspace > Canvas.
+2. Navigate to the add component menu.
+3. Search for or navigate to "IWS".
+4. Select the IWS component to add it.	1. The IWS component is added to the canvas at the cursor location.
+2. The component displays with default properties.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify default component properties	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.	1. Select the IWS component on Center Workspace > Canvas.
+2. Open Right Sidebar > Properties drawer.
+3. Review all default property values.	1. Component name defaults to "IWS 1" (or next available number).
+2. All property fields display their default values.
+3. No validation errors are shown.	Manual	Designer > Components > IWS > Component Basics
+IWS - Rename component	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.	1. Select the IWS component on Center Workspace > Canvas.
+2. Open Right Sidebar > Properties drawer.
+3. Change the component name to "Conference Room Sensor".
+4. Click away to confirm the change.	1. The component name updates to "Conference Room Sensor" on the canvas.
+2. The name updates in Left Sidebar > Inventory.
+3. No validation errors are shown.	Manual	Designer > Components > IWS > Component Basics
+IWS - Rename component with special characters	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.	1. Select the IWS component on Center Workspace > Canvas.
+2. Open Right Sidebar > Properties drawer.
+3. Attempt to rename the component to "IWS @#$%&*!" (special characters).
+4. Click away to confirm.	1. The component either accepts the name or displays a validation error if special characters are not permitted.
+2. If accepted, the name displays correctly on the canvas and inventory.	Manual	Designer > Components > IWS > Component Basics
+IWS - Rename component with maximum length name	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.	1. Select the IWS component on Center Workspace > Canvas.
+2. Open Right Sidebar > Properties drawer.
+3. Enter a very long name (e.g., 256 characters).
+4. Click away to confirm.	1. The component either accepts the full name or truncates at the maximum allowed length.
+2. If truncated, no data corruption occurs.
+3. The name displays correctly in inventory and canvas.	Manual	Designer > Components > IWS > Component Basics
+IWS - Add multiple IWS components	1. Open "Q-SYS Designer" software.
+2. Create a new design.	1. Add a first IWS component to Center Workspace > Canvas.
+2. Add a second IWS component to the canvas.
+3. Add a third IWS component to the canvas.	1. Each component gets a unique default name (e.g., "IWS 1", "IWS 2", "IWS 3").
+2. All three components are listed in Left Sidebar > Inventory.
+3. Each component can be independently selected and configured.	Manual	Designer > Components > IWS > Component Basics
+IWS - Delete component from design	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.	1. Select the IWS component on Center Workspace > Canvas.
+2. Press the Delete key (or right-click and select "Delete").
+3. Confirm deletion if prompted.	1. The IWS component is removed from the canvas.
+2. The component is removed from Left Sidebar > Inventory.
+3. No orphaned references remain in the design.	Manual	Designer > Components > IWS > Component Basics
+IWS - Copy and paste component	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas and configure properties.	1. Select the IWS component on Center Workspace > Canvas.
+2. Press Ctrl+C to copy.
+3. Press Ctrl+V to paste.	1. A duplicate IWS component appears on the canvas.
+2. The duplicate has a unique name (e.g., "IWS 2").
+3. The duplicate retains the same property configuration as the original.	Manual	Designer > Components > IWS > Component Basics
+IWS - Double-click to open component window	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.	1. Double-click the IWS component on Center Workspace > Canvas.	1. Floating Window "Intelligent Workspace Sensor" opens.
+2. The window title bar reads "Intelligent Workspace Sensor".
+3. Three tabs are visible: "Status", "LED Configuration", "Occupancy Sensor Configuration".
+4. The "Status" tab is selected by default, showing sections: Status (with ID button), CPU Temp./Mobo Temp., Network, Sensor Output, Timeout Settings, and Group.
+5. The window can be moved, resized, and closed.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify no license required	1. Open "Q-SYS Designer" software.
+2. Create a new design with no additional licenses applied.	1. Add an IWS component to Center Workspace > Canvas.
+2. Review for any license warning or restriction messages.
+3. Open Right Sidebar > Properties drawer and review all properties.	1. The IWS component is added without any license warning.
+2. All component features are accessible without additional license.
+3. No "license required" indicators appear anywhere in the UI.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify Sensor Group configuration	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, locate the Group section.
+3. Enter a value in the "Sensor Group" field (e.g., "Building A - Floor 2").
+4. Click away to confirm.	1. The Sensor Group field accepts the entered value.
+2. The value is displayed in the Group section.
+3. The Sensor Group value can be used to logically group multiple IWS devices.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify Timeout setting in minutes	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, locate the Timeout Settings section.
+3. Enter a value in the "Timeout (mins)" field (e.g., 5).
+4. Observe the Occupancy State behavior after people leave the sensor field of view.	1. The Timeout field accepts the entered value in minutes.
+2. After the last person leaves the field of view, the Occupancy State remains true/occupied for approximately the configured timeout duration.
+3. After the timeout expires, Occupancy State changes to false/unoccupied.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify Poll Rate setting in seconds	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, locate the Timeout Settings section.
+3. Enter a value in the "Poll Rate (secs)" field (e.g., 2).
+4. Observe the sensor data update frequency in the Sensor Output section.	1. The Poll Rate field accepts the entered value in seconds.
+2. Sensor data updates at approximately the configured interval.
+3. Changing the poll rate visibly affects the update frequency.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify Status tab Network section displays device info	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, review the Network section fields: Hostname, Model ID, System Uptime, Kernel Ver., Framework Ver.	1. Hostname displays the device hostname.
+2. Model ID displays the IWS model identifier.
+3. System Uptime displays a time value.
+4. Kernel Ver. displays a version string.
+5. Framework Ver. displays a version string.
+6. All values are populated and plausible.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify ID button triggers device identification	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, locate the "ID" button in the Status section.
+3. Click the "ID" button.
+4. Observe the physical IWS device.	1. The physical IWS device performs an identification action (e.g., LED ring flashes a distinct pattern).
+2. The identification action is clearly visible and distinguishable from normal LED operation.
+3. The identification stops after a period or when the button is toggled off.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify CPU Temp and Mobo Temp display	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. On the Status tab, locate "CPU Temp." and "Mobo Temp." fields.
+3. Observe the displayed values.	1. CPU Temp. displays a numeric temperature value.
+2. Mobo Temp. displays a numeric temperature value.
+3. Both values are within plausible hardware temperature ranges.
+4. Values update periodically.	Manual	Designer > Components > IWS > Component Basics
+IWS - Verify Bluetooth is not available	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.	1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+2. Review all tabs: Status, LED Configuration, Occupancy Sensor Configuration.
+3. Inspect Right Sidebar > Properties drawer for any Bluetooth-related settings.
+4. Review the control pins list for any Bluetooth-related pins.	1. No Bluetooth configuration options are present in any tab.
+2. No Bluetooth-related properties appear in the Properties drawer.
+3. No Bluetooth-related control pins are exposed.
+4. The device does not advertise or expose Bluetooth functionality in Q-SYS Designer.	Manual	Designer > Components > IWS > Component Basics

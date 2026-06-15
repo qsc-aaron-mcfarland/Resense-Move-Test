@@ -1,0 +1,60 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify component properties persist after save and reopen	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. Rename the component to "Lobby Sensor".
+5. Modify additional properties (e.g., temperature unit to °F).	1. Save the design via Menu Bar > File > Save.
+2. Close the design.
+3. Reopen the saved design.
+4. Select the IWS component on Center Workspace > Canvas.
+5. Open Right Sidebar > Properties drawer.	1. The component name is "Lobby Sensor".
+2. All modified property values are retained exactly as saved.
+3. No properties have reverted to defaults.	Manual	Designer > Components > IWS > Persistence
+IWS - Verify LED configuration persists after save and reopen	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. IWS device is commissioned and connected on the network.
+5. Configure the LED ring to a specific color (e.g., blue) and brightness (e.g., 75%).	1. Save the design via Menu Bar > File > Save.
+2. Close the design.
+3. Reopen the saved design.
+4. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".
+5. Select the "LED Configuration" tab and review the LED configuration values.	1. The LED color is still set to blue.
+2. The LED brightness is still set to 75%.
+3. The physical device LED ring matches the saved configuration after design is redeployed.	Manual	Designer > Components > IWS > Persistence
+IWS - Verify control pin wiring persists after save and reopen	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component and a Script component to the canvas.
+4. Wire at least three output pins from IWS to the Script component.	1. Save the design via Menu Bar > File > Save.
+2. Close the design.
+3. Reopen the saved design.
+4. Review the wiring on Center Workspace > Canvas.	1. All wire connections between the IWS and Script components are intact.
+2. The correct pins are connected as originally configured.
+3. No broken or missing connections.	Manual	Designer > Components > IWS > Persistence
+IWS - Verify Peripheral Manager assignment persists after save and reopen	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas.
+4. Commission and assign an IWS device to the component via Peripheral Manager.	1. Save the design via Menu Bar > File > Save.
+2. Close the design.
+3. Reopen the saved design.
+4. Open Peripheral Manager.
+5. Review the device assignment for the IWS component.	1. The IWS device is still assigned to the IWS component.
+2. The device connection status is correct (connected if device is still on network).
+3. No re-commissioning is required.	Manual	Designer > Components > IWS > Persistence
+IWS - Verify design with IWS component can be saved as a new file	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add an IWS component to the canvas with full configuration (name, LED settings, zones, wiring).	1. Save the design via Menu Bar > File > Save As.
+2. Choose a different file name and location.
+3. Close the design.
+4. Open the newly saved file.
+5. Review all IWS component configuration.	1. The new file opens successfully.
+2. All IWS component configuration is preserved in the new file.
+3. The original file remains unchanged.	Manual	Designer > Components > IWS > Persistence
+IWS - Verify multiple IWS components persist independently	1. Open "Q-SYS Designer" software.
+2. Create a new design.
+3. Add three IWS components to the canvas.
+4. Configure each with unique names, LED settings, and detection zones.	1. Save the design via Menu Bar > File > Save.
+2. Close the design.
+3. Reopen the saved design.
+4. Review each IWS component's configuration individually.	1. Each of the three IWS components retains its unique configuration.
+2. Component names, LED settings, and detection zones are independent and correct.
+3. No cross-contamination of settings between components.	Manual	Designer > Components > IWS > Persistence
