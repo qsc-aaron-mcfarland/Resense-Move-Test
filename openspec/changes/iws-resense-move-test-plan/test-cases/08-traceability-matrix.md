@@ -4,7 +4,6 @@
 |---|---|---|---|---|---|
 | IWS - Verify component available in inventory | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | Designer inventory presence |
 | IWS - Add component to schematic via drag and drop | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
-| IWS - Add component via right-click context menu | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
 | IWS - Verify default component properties | Component Basics | IWS-COMP-2 | QSYSDEV-58457 | IWS - Q-SYSify defaults of Resense Move | Default property values |
 | IWS - Rename component | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
 | IWS - Rename component with special characters | Component Basics | IWS-COMP-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
@@ -111,3 +110,14 @@
 | IWS - Verify Peripheral Manager assignment persists after save and reopen | Persistence | IWS-SW-2, IWS-PM-1 | QSYSDEV-53100 | Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1) | |
 | IWS - Verify design with IWS component can be saved as a new file | Persistence | IWS-SW-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
 | IWS - Verify multiple IWS components persist independently | Persistence | IWS-SW-2 | QSYSDEV-53104 | Implement Control of IWS - device_lib / control_lib / designer components | |
+| IWS - Verify LLDP is enabled on single Resense Move | LLDP / Network | | | | LLDP discovery for single device |
+| IWS - Verify single Resense Move network topology in Q-SYS | LLDP / Network | | | | Topology view validation |
+| IWS - Verify daisy-chained Resense Move devices are discovered | LLDP / Network | | | | Daisy-chain discovery |
+| IWS - Verify LLDP topology shows daisy-chain order | LLDP / Network | | | | Chain order in topology |
+| IWS - Verify sensor data flows through daisy-chained devices | LLDP / Network | | | | Independent sensor data per device |
+| IWS - Verify daisy-chain resilience when middle device is disconnected | LLDP / Network | | | | Middle device removal |
+| IWS - Verify daisy-chain recovery when disconnected device is reconnected | LLDP / Network | | | | Chain recovery |
+| IWS - Verify LLDP updates when daisy-chain order changes | LLDP / Network | | | | Topology update after reorder |
+| IWS - Verify maximum daisy-chain depth | LLDP / Network | | | | Max chain length |
+| IWS - Verify LED control works on all daisy-chained devices | LLDP / Network | | | | LED control through chain |
+| IWS - Verify firmware update on daisy-chained devices | LLDP / Network | | | | Firmware update through chain |

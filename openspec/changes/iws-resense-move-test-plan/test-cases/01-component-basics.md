@@ -24,19 +24,7 @@
 
 ---
 
-## 01.c - IWS - Add component via right-click context menu
-
-| Field | Details |
-|---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design. |
-| **Steps** | 1. Right-click on Center Workspace > Canvas.<br>2. Navigate to the add component menu.<br>3. Search for or navigate to "IWS".<br>4. Select the IWS component to add it. |
-| **Expected Results** | 1. The IWS component is added to the canvas at the cursor location.<br>2. The component displays with default properties. |
-| **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Component Basics |
-
----
-
-## 01.d - IWS - Verify default component properties
+## 01.c - IWS - Verify default component properties
 
 | Field | Details |
 |---|---|
@@ -48,7 +36,7 @@
 
 ---
 
-## 01.e - IWS - Rename component
+## 01.d - IWS - Rename component
 
 | Field | Details |
 |---|---|
@@ -60,7 +48,7 @@
 
 ---
 
-## 01.f - IWS - Rename component with special characters
+## 01.e - IWS - Rename component with special characters
 
 | Field | Details |
 |---|---|
@@ -72,7 +60,7 @@
 
 ---
 
-## 01.g - IWS - Rename component with maximum length name
+## 01.f - IWS - Rename component with maximum length name
 
 | Field | Details |
 |---|---|
@@ -84,7 +72,7 @@
 
 ---
 
-## 01.h - IWS - Add multiple IWS components
+## 01.g - IWS - Add multiple IWS components
 
 | Field | Details |
 |---|---|
@@ -96,7 +84,7 @@
 
 ---
 
-## 01.i - IWS - Delete component from design
+## 01.h - IWS - Delete component from design
 
 | Field | Details |
 |---|---|
@@ -108,7 +96,7 @@
 
 ---
 
-## 01.j - IWS - Copy and paste component
+## 01.i - IWS - Copy and paste component
 
 | Field | Details |
 |---|---|
@@ -120,7 +108,7 @@
 
 ---
 
-## 01.k - IWS - Double-click to open component window
+## 01.j - IWS - Double-click to open component window
 
 | Field | Details |
 |---|---|
@@ -132,7 +120,7 @@
 
 ---
 
-## 01.l - IWS - Verify no license required
+## 01.k - IWS - Verify no license required
 
 | Field | Details |
 |---|---|
@@ -144,7 +132,7 @@
 
 ---
 
-## 01.m - IWS - Verify Sensor Group configuration
+## 01.l - IWS - Verify Sensor Group configuration
 
 | Field | Details |
 |---|---|
@@ -156,7 +144,7 @@
 
 ---
 
-## 01.n - IWS - Verify Timeout setting in minutes
+## 01.m - IWS - Verify Timeout setting in minutes
 
 | Field | Details |
 |---|---|
@@ -168,7 +156,7 @@
 
 ---
 
-## 01.o - IWS - Verify Poll Rate setting in seconds
+## 01.n - IWS - Verify Poll Rate setting in seconds
 
 | Field | Details |
 |---|---|
@@ -180,7 +168,7 @@
 
 ---
 
-## 01.p - IWS - Verify Status tab Network section displays device info
+## 01.o - IWS - Verify Status tab Network section displays device info
 
 | Field | Details |
 |---|---|
@@ -192,7 +180,7 @@
 
 ---
 
-## 01.q - IWS - Verify ID button triggers device identification
+## 01.p - IWS - Verify ID button triggers device identification
 
 | Field | Details |
 |---|---|
@@ -204,7 +192,7 @@
 
 ---
 
-## 01.r - IWS - Verify CPU Temp and Mobo Temp display
+## 01.q - IWS - Verify CPU Temp and Mobo Temp display
 
 | Field | Details |
 |---|---|
@@ -216,7 +204,7 @@
 
 ---
 
-## 01.s - IWS - Verify Bluetooth is not available
+## 01.r - IWS - Verify Bluetooth is not available
 
 | Field | Details |
 |---|---|

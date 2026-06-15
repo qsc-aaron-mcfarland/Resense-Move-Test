@@ -10,12 +10,6 @@ IWS - Add component to schematic via drag and drop	1. Open "Q-SYS Designer" soft
 3. Drag the IWS component onto Center Workspace > Canvas.	1. The IWS component node appears on the canvas.
 2. The component shows default name label (e.g., "IWS 1").
 3. Input and output pins are visible on the component node.	Manual	Designer > Components > IWS > Component Basics
-IWS - Add component via right-click context menu	1. Open "Q-SYS Designer" software.
-2. Create a new design.	1. Right-click on Center Workspace > Canvas.
-2. Navigate to the add component menu.
-3. Search for or navigate to "IWS".
-4. Select the IWS component to add it.	1. The IWS component is added to the canvas at the cursor location.
-2. The component displays with default properties.	Manual	Designer > Components > IWS > Component Basics
 IWS - Verify default component properties	1. Open "Q-SYS Designer" software.
 2. Create a new design.
 3. Add an IWS component to the canvas.	1. Select the IWS component on Center Workspace > Canvas.
