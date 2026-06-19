@@ -1,0 +1,39 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify device reaches OK state after multiple power cycles	1. Open "Q-SYS Designer" software.
+2. Design deployed to Core with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. IWS device is in "OK" state.	1. Verify the IWS device is in "OK" state.
+2. Power cycle the IWS device by disconnecting and reconnecting power.
+3. Wait for the device to come back online and reach "OK" state.
+4. Repeat steps 2-3 multiple times.
+5. After the final power cycle, verify full device functionality.	1. The device reaches "OK" state after each power cycle.
+2. The device reconnects automatically without manual intervention.
+3. Sensor data resumes flowing after each power cycle.
+4. The device is fully functional with no degradation.
+5. Configuration is retained across all power cycles.	Manual	Designer > Components > IWS > Power & Reboots
+IWS - Verify device reaches OK state after multiple reboots	1. Open "Q-SYS Designer" software.
+2. Design deployed to Core with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. IWS device is in "OK" state.	1. Verify the IWS device is in "OK" state.
+2. Reboot the IWS device via QPM.
+3. Wait for the device to come back online and reach "OK" state.
+4. Repeat steps 2-3 multiple times.
+5. After the final reboot, verify full device functionality.	1. The device reaches "OK" state after each reboot.
+2. The device reconnects automatically without manual intervention.
+3. Sensor data resumes flowing after each reboot.
+4. The device is fully functional with no degradation.
+5. Configuration is retained across all reboots.	Manual	Designer > Components > IWS > Power & Reboots
+IWS - Verify device recovers after Ethernet disconnection	1. Open "Q-SYS Designer" software.
+2. Design deployed to Core with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. IWS device is in "OK" state.	1. Verify the IWS device is in "OK" state.
+2. Disconnect the Ethernet cable between the Core and the IWS device.
+3. Wait 30 seconds.
+4. Reconnect the Ethernet cable.
+5. Wait for the device to reach "OK" state.
+6. Repeat steps 2-5 multiple times.
+7. After the final reconnection, verify full device functionality.	1. The device reaches "OK" state after each Ethernet reconnection.
+2. The device reconnects automatically without manual intervention.
+3. Sensor data resumes flowing after each reconnection.
+4. The device is fully functional with no degradation.
+5. No memory leaks or resource exhaustion occurs.	Manual	Designer > Components > IWS > Power & Reboots

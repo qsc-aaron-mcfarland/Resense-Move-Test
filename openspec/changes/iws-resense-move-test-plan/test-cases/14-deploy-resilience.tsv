@@ -1,0 +1,14 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify device reaches OK state after multiple design deployments	1. Open "Q-SYS Designer" software.
+2. Create a design with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.	1. Deploy the design to the Core (F5).
+2. Verify the IWS device reaches "OK" state.
+3. Verify sensor data is flowing.
+4. Disconnect from the Core (F7).
+5. Deploy the design to the Core again (F5).
+6. Repeat steps 2-5 multiple times.
+7. After the final deployment, verify full device functionality.	1. The IWS device reaches "OK" state on each deployment.
+2. Sensor data flows correctly after each deployment.
+3. The device reconnects automatically without manual intervention on each deployment.
+4. The device is fully functional with no degradation.
+5. No degradation in connection time or sensor responsiveness.	Manual	Designer > Components > IWS > Deploy Resilience

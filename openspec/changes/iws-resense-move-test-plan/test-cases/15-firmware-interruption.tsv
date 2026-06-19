@@ -1,0 +1,14 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify device recovers from interrupted firmware update (power loss)	1. Open "Q-SYS Designer" software.
+2. Design deployed to Core with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. The IWS device is running an older firmware version than what the Core provides.	1. Deploy a design with a newer firmware version to the Core, triggering the automatic firmware update on the IWS device.
+2. While the firmware update is in progress (approximately 50% complete), disconnect power from the IWS device.
+3. Wait 10 seconds.
+4. Reconnect power to the IWS device.
+5. Wait for the device to boot.
+6. Observe the device status and behavior.	1. The device does not brick (become permanently non-functional).
+2. The device boots into either its previous firmware version or a recovery mode.
+3. The device is discoverable on the network after power restoration.
+4. A firmware update can be reattempted and completed successfully.
+5. After a successful firmware update, the device reaches "OK" state.	Manual	Designer > Components > IWS > Firmware Interruption

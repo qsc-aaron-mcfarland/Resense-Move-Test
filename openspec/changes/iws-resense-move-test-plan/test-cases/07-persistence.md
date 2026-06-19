@@ -16,7 +16,7 @@
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas.<br>4. IWS device is commissioned and connected on the network.<br>5. Configure the LED ring to a specific color (e.g., blue) and brightness (e.g., 75%). |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas.<br>4. IWS device is on the network, inventory item name matches device name in Configurator.<br>5. Configure the LED ring to a specific color (e.g., blue) and brightness (e.g., 75%). |
 | **Steps** | 1. Save the design via Menu Bar > File > Save.<br>2. Close the design.<br>3. Reopen the saved design.<br>4. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".<br>5. Select the "LED Configuration" tab and review the LED configuration values. |
 | **Expected Results** | 1. The LED color is still set to blue.<br>2. The LED brightness is still set to 75%.<br>3. The physical device LED ring matches the saved configuration after design is redeployed. |
 | **Execution Type** | Manual |
@@ -36,13 +36,13 @@
 
 ---
 
-## 07.d - IWS - Verify Peripheral Manager assignment persists after save and reopen
+## 07.d - IWS - Verify device name assignment persists after save and reopen
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas.<br>4. Commission and assign an IWS device to the component via Peripheral Manager. |
-| **Steps** | 1. Save the design via Menu Bar > File > Save.<br>2. Close the design.<br>3. Reopen the saved design.<br>4. Open Peripheral Manager.<br>5. Review the device assignment for the IWS component. |
-| **Expected Results** | 1. The IWS device is still assigned to the IWS component.<br>2. The device connection status is correct (connected if device is still on network).<br>3. No re-commissioning is required. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas.<br>4. Set the inventory item name to match the device name in Configurator. |
+| **Steps** | 1. Save the design via Menu Bar > File > Save.<br>2. Close the design.<br>3. Reopen the saved design.<br>4. Select the IWS component and review the inventory item name in Right Sidebar > Properties drawer.<br>5. Deploy the design to the Core. |
+| **Expected Results** | 1. The inventory item name is retained exactly as saved.<br>2. On deploy, the device auto-connects (device name matches inventory item name).<br>3. No manual reassignment is required. |
 | **Execution Type** | Manual |
 | **Section** | Designer > Components > IWS > Persistence |
 
@@ -64,8 +64,8 @@
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add three IWS components to the canvas.<br>4. Configure each with unique names, LED settings, and detection zones. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add three IWS components to the canvas.<br>4. Configure each with unique names and LED settings. |
 | **Steps** | 1. Save the design via Menu Bar > File > Save.<br>2. Close the design.<br>3. Reopen the saved design.<br>4. Review each IWS component's configuration individually. |
-| **Expected Results** | 1. Each of the three IWS components retains its unique configuration.<br>2. Component names, LED settings, and detection zones are independent and correct.<br>3. No cross-contamination of settings between components. |
+| **Expected Results** | 1. Each of the three IWS components retains its unique configuration.<br>2. Component names and LED settings are independent and correct.<br>3. No cross-contamination of settings between components. |
 | **Execution Type** | Manual |
 | **Section** | Designer > Components > IWS > Persistence |

@@ -1,179 +1,143 @@
 # Peripheral Manager Test Cases
 
-## 04.a - IWS - Verify device appears in Peripheral Manager discovery
+## 04.a - IWS - Verify device appears in Configurator via Q-SYS Discovery
 
 | Field | Details |
 |---|---|
 | **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is powered on and connected to the same network as the Q-SYS Core. |
-| **Steps** | 1. Open Menu Bar > Tools > Peripheral Manager (or Configurator).<br>2. Initiate device discovery / scan.<br>3. Review the discovered devices list. |
-| **Expected Results** | 1. The IWS device appears in the discovered devices list.<br>2. The device shows its correct model identifier, IP address, and status.<br>3. The device is listed as "Not Commissioned" or equivalent. |
+| **Steps** | 1. Open Menu Bar > Tools > Configurator.<br>2. Review the discovered devices list. |
+| **Expected Results** | 1. The IWS device automatically appears in the Configurator device list via Q-SYS Discovery.<br>2. The device shows its correct model identifier, IP address, and status.<br>3. No manual scan or discovery initiation is required. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Configurator |
 
 ---
 
-## 04.b - IWS - Commission a discovered IWS device
+## 04.b - IWS - Verify device connects when inventory name matches device name
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is discovered in Peripheral Manager but not yet commissioned. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the discovered IWS device.<br>3. Enter the device credentials (username/password).<br>4. Click the commission/add button. |
-| **Expected Results** | 1. The device status changes from "Not Commissioned" to "Connected" or "OK".<br>2. The device appears in the design inventory as an assigned peripheral.<br>3. Sensor data begins flowing to the component. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas (creating an inventory item).<br>4. IWS device is on the network and visible in Configurator.<br>5. Secured Communications is NOT enabled on the Core. |
+| **Steps** | 1. Set the IWS inventory item name to match the device name shown in Configurator.<br>2. Deploy the design to the Core (F5).<br>3. Observe the device status. |
+| **Expected Results** | 1. The IWS device automatically connects to the component.<br>2. The device reaches "OK" state without any credential entry.<br>3. Sensor data begins flowing to the component. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Configurator |
 
 ---
 
-## 04.c - IWS - Commission with incorrect credentials
+## 04.c - IWS - Verify device does not connect when inventory name does not match
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is discovered in Peripheral Manager but not yet commissioned. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the discovered IWS device.<br>3. Enter incorrect credentials (wrong username or password).<br>4. Click the commission/add button. |
-| **Expected Results** | 1. A clear error message is displayed indicating authentication failure.<br>2. The device remains in "Not Commissioned" state.<br>3. No crash or unhandled exception occurs. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas.<br>4. IWS device is on the network and visible in Configurator.<br>5. Secured Communications is NOT enabled on the Core. |
+| **Steps** | 1. Set the IWS inventory item name to a value that does NOT match any device name in Configurator.<br>2. Deploy the design to the Core (F5).<br>3. Observe the device status. |
+| **Expected Results** | 1. The IWS component does not connect to any device.<br>2. The component shows a disconnected/unassigned state.<br>3. No sensor data flows.<br>4. No crash or unhandled error occurs. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Configurator |
 
 ---
 
-## 04.d - IWS - Commission with empty credentials
+## 04.d - IWS - Verify device connects with Secured Communications enabled
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is discovered in Peripheral Manager but not yet commissioned. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the discovered IWS device.<br>3. Leave credential fields empty.<br>4. Click the commission/add button. |
-| **Expected Results** | 1. A validation message indicates that credentials are required.<br>2. The device is not commissioned.<br>3. The UI does not allow proceeding without credentials. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas.<br>4. IWS device is on the network and visible in Configurator.<br>5. Secured Communications IS enabled on the Core.<br>6. Device password has been set via QPM. |
+| **Steps** | 1. Set the IWS inventory item name to match the device name in Configurator.<br>2. Deploy the design to the Core (F5).<br>3. Observe the device status. |
+| **Expected Results** | 1. The IWS device connects to the component without any credential prompt in Designer.<br>2. The device reaches "OK" state.<br>3. Sensor data begins flowing to the component.<br>4. No authentication dialogs appear in Designer. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Configurator |
 
 ---
 
-## 04.e - IWS - Decommission a commissioned device
+## 04.e - IWS - Verify device fails to connect with Secured Communications enabled and no password set
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is commissioned and connected. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the commissioned IWS device.<br>3. Click the decommission/remove button.<br>4. Confirm the action if prompted. |
-| **Expected Results** | 1. The device status changes to "Not Commissioned" or is removed from the assigned list.<br>2. Sensor data stops flowing to the component.<br>3. The component on the canvas shows a disconnected/unassigned state. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas.<br>4. IWS device is on the network and visible in Configurator.<br>5. Secured Communications IS enabled on the Core.<br>6. Device password has NOT been set via QPM. |
+| **Steps** | 1. Set the IWS inventory item name to match the device name in Configurator.<br>2. Deploy the design to the Core (F5).<br>3. Observe the device status. |
+| **Expected Results** | 1. The device fails to connect.<br>2. A fault status is displayed indicating the device is not trusted or not configured for secure communication.<br>3. The component does not receive sensor data.<br>4. No crash or unhandled exception occurs. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Configurator |
 
 ---
 
-## 04.f - IWS - Verify firmware version displayed
+## 04.f - IWS - Verify firmware version displayed in QPM
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is commissioned and connected. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the commissioned IWS device.<br>3. Locate the firmware version information. |
+| **Preconditions** | 1. Open Q-SYS Peripheral Manager (QPM) in a web browser.<br>2. IWS device is on the network and accessible.<br>3. Log in to QPM with valid credentials. |
+| **Steps** | 1. Navigate to the IWS device in QPM.<br>2. Locate the firmware version information. |
 | **Expected Results** | 1. The current firmware version of the IWS device is displayed.<br>2. The version string is in a recognizable format. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > QPM Management |
 
 ---
 
-## 04.g - IWS - Firmware update when update is available
+## 04.g - IWS - Verify firmware is automatically updated through the Core
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is commissioned and connected.<br>4. A firmware update is available for the IWS device. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the commissioned IWS device.<br>3. Locate the firmware update option.<br>4. Initiate the firmware update.<br>5. Wait for the update to complete. |
-| **Expected Results** | 1. A progress indicator shows during the firmware update.<br>2. The update completes successfully.<br>3. The firmware version updates to the new version.<br>4. The device reconnects after the update without manual intervention. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design with an IWS component.<br>3. IWS device is on the network and connected.<br>4. The IWS device is running an older firmware version than what the Core provides. |
+| **Steps** | 1. Deploy the design to the Core (F5).<br>2. Observe the IWS device status during and after deployment.<br>3. Wait for the firmware update to complete. |
+| **Expected Results** | 1. The Core automatically pushes the firmware update to the IWS device.<br>2. The firmware update completes without manual intervention.<br>3. The device firmware version updates to the version provided by the Core.<br>4. The device reconnects and reaches "OK" state after the update. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Firmware |
 
 ---
 
-## 04.h - IWS - Firmware update when device is already up to date
+## 04.h - IWS - Verify no firmware update when device is already up to date
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is commissioned, connected, and running the latest firmware. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the commissioned IWS device.<br>3. Check for firmware update availability. |
-| **Expected Results** | 1. The UI indicates that the device firmware is already up to date.<br>2. No update is offered or initiated. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design with an IWS component.<br>3. IWS device is on the network and connected.<br>4. The IWS device is already running the firmware version provided by the Core. |
+| **Steps** | 1. Deploy the design to the Core (F5).<br>2. Observe the IWS device status during and after deployment. |
+| **Expected Results** | 1. No firmware update is initiated.<br>2. The device reaches "OK" state without a reboot or update cycle.<br>3. The device connects in the normal expected timeframe. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Firmware |
 
 ---
 
-## 04.i - IWS - Verify device status indicators in Peripheral Manager
+## 04.i - IWS - Verify device status indicators across Designer, Configurator, and QPM
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is commissioned and connected. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Review the status column for the IWS device.<br>3. Note the status indicator (icon, color, text). |
-| **Expected Results** | 1. The status indicator shows a healthy/connected state (e.g., green icon, "OK" text).<br>2. Device name, model, IP address, and firmware version are all visible. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design with an IWS component.<br>3. IWS device is on the network, name matches inventory item.<br>4. Design is deployed to the Core and device is connected. |
+| **Steps** | 1. Double-click the IWS component to open Floating Window "Intelligent Workspace Sensor".<br>2. Select the Status tab and review the device status.<br>3. Open Menu Bar > Tools > Configurator and locate the IWS device.<br>4. Open QPM in a web browser, navigate to the IWS device, and review the status at the top of the page. |
+| **Expected Results** | 1. The component Status tab shows device is connected and healthy.<br>2. In Configurator, the IWS device shows a green box indicating the device is running normally and reachable (able to communicate with device and available to add to a design if not already in use).<br>3. In QPM, the top of the page displays "Status:" with a healthy/connected state.<br>4. Device name, model, and IP address are visible in each location. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Status |
 
 ---
 
-## 04.j - IWS - Verify Peripheral Manager status when device goes offline
+## 04.j - IWS - Verify device status when device goes offline
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is commissioned and connected. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Disconnect the IWS device from the network.<br>3. Wait for the status to update.<br>4. Observe the device status. |
-| **Expected Results** | 1. The device status changes to a fault/disconnected state (e.g., red icon, "Fault" or "Not Present" text).<br>2. The status update occurs within a reasonable timeout period. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Design deployed to Core with an IWS component.<br>3. IWS device is connected and in "OK" state. |
+| **Steps** | 1. Verify the IWS device is in "OK" state on the component Status tab.<br>2. Disconnect the IWS device from the network (unplug Ethernet).<br>3. Wait for the status to update.<br>4. Check the component Status tab in Designer.<br>5. Check Configurator for the device.<br>6. Attempt to access the device in QPM via its IP address. |
+| **Expected Results** | 1. The component Status tab shows a fault/disconnected state.<br>2. In Configurator, the IWS device no longer appears (device not visible when offline).<br>3. QPM does not load for the device (web interface unreachable since it is accessed via IP).<br>4. The status update occurs within a reasonable timeout period. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Status |
 
 ---
 
-## 04.k - IWS - Verify Peripheral Manager status when device comes back online
+## 04.k - IWS - Verify device status when device comes back online
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is commissioned but currently disconnected from network. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Reconnect the IWS device to the network.<br>3. Wait for the status to update.<br>4. Observe the device status. |
-| **Expected Results** | 1. The device status returns to healthy/connected state.<br>2. No manual re-commissioning is required.<br>3. Sensor data resumes flowing. |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Design deployed to Core with an IWS component.<br>3. IWS device was previously connected but is currently disconnected from network. |
+| **Steps** | 1. Verify the IWS device shows a fault/disconnected state.<br>2. Reconnect the IWS device to the network (plug in Ethernet).<br>3. Wait for the status to update.<br>4. Check the component Status tab in Designer.<br>5. Check the device in Configurator.<br>6. Check the device in QPM. |
+| **Expected Results** | 1. The component Status tab returns to a healthy/connected state ("OK").<br>2. In Configurator, the green box reappears indicating the device is reachable and running normally.<br>3. In QPM, the "Status:" field reflects the device is back online.<br>4. Sensor data resumes flowing without manual intervention. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Status |
 
 ---
 
-## 04.l - IWS - Assign IWS device to component in design
+## 04.n - IWS - Verify multiple IWS devices appear in Configurator
 
 | Field | Details |
 |---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add an IWS component to the canvas.<br>4. IWS device is discovered but not assigned to any component. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the IWS device.<br>3. Assign it to the IWS component in the design (e.g., via dropdown or drag). |
-| **Expected Results** | 1. The device is assigned to the IWS component.<br>2. The component on the canvas reflects the connected state.<br>3. Sensor data begins appearing in Floating Window "Intelligent Workspace Sensor". |
+| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Multiple IWS devices (at least 2) are powered on and connected to the same network as the Q-SYS Core. |
+| **Steps** | 1. Open Menu Bar > Tools > Configurator.<br>2. Review the discovered devices list. |
+| **Expected Results** | 1. All IWS devices on the network automatically appear in Configurator.<br>2. Each device shows a unique identifier (name, IP address, serial number, or MAC address).<br>3. Devices can be individually selected. |
 | **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
-
----
-
-## 04.m - IWS - Reassign IWS device to a different component
-
-| Field | Details |
-|---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Add two IWS components to the canvas.<br>4. IWS device is assigned to the first component. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Select the IWS device currently assigned to "IWS 1".<br>3. Reassign it to "IWS 2". |
-| **Expected Results** | 1. The device is removed from "IWS 1" assignment.<br>2. The device is now assigned to "IWS 2".<br>3. "IWS 1" shows unassigned/disconnected state.<br>4. "IWS 2" shows connected state and receives sensor data. |
-| **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
-
----
-
-## 04.n - IWS - Verify device discovery with multiple IWS devices
-
-| Field | Details |
-|---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. Multiple IWS devices (at least 2) are powered on and connected to the network. |
-| **Steps** | 1. Open Peripheral Manager.<br>2. Initiate device discovery.<br>3. Review the discovered devices list. |
-| **Expected Results** | 1. All IWS devices on the network are discovered and listed.<br>2. Each device shows a unique identifier (IP address, serial number, or MAC address).<br>3. Devices can be individually selected and managed. |
-| **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
-
----
-
-## 04.o - IWS - Verify Peripheral Manager with device password change
-
-| Field | Details |
-|---|---|
-| **Preconditions** | 1. Open "Q-SYS Designer" software.<br>2. Create a new design.<br>3. IWS device is commissioned and connected with known credentials. |
-| **Steps** | 1. Change the IWS device password via the device web interface or other management tool.<br>2. Return to Peripheral Manager in Q-SYS Designer.<br>3. Observe the device status after the password change. |
-| **Expected Results** | 1. The device status changes to indicate an authentication error or fault.<br>2. A clear message indicates the credentials are no longer valid.<br>3. Re-entering the new credentials restores the connection. |
-| **Execution Type** | Manual |
-| **Section** | Designer > Components > IWS > Peripheral Manager |
+| **Section** | Designer > Components > IWS > Configurator |

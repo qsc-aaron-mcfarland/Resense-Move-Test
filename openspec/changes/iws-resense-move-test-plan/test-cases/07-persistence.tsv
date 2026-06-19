@@ -13,7 +13,7 @@ IWS - Verify component properties persist after save and reopen	1. Open "Q-SYS D
 IWS - Verify LED configuration persists after save and reopen	1. Open "Q-SYS Designer" software.
 2. Create a new design.
 3. Add an IWS component to the canvas.
-4. IWS device is commissioned and connected on the network.
+4. IWS device is on the network, inventory item name matches device name in Configurator.
 5. Configure the LED ring to a specific color (e.g., blue) and brightness (e.g., 75%).	1. Save the design via Menu Bar > File > Save.
 2. Close the design.
 3. Reopen the saved design.
@@ -30,16 +30,16 @@ IWS - Verify control pin wiring persists after save and reopen	1. Open "Q-SYS De
 4. Review the wiring on Center Workspace > Canvas.	1. All wire connections between the IWS and Script components are intact.
 2. The correct pins are connected as originally configured.
 3. No broken or missing connections.	Manual	Designer > Components > IWS > Persistence
-IWS - Verify Peripheral Manager assignment persists after save and reopen	1. Open "Q-SYS Designer" software.
+IWS - Verify device name assignment persists after save and reopen	1. Open "Q-SYS Designer" software.
 2. Create a new design.
 3. Add an IWS component to the canvas.
-4. Commission and assign an IWS device to the component via Peripheral Manager.	1. Save the design via Menu Bar > File > Save.
+4. Set the inventory item name to match the device name in Configurator.	1. Save the design via Menu Bar > File > Save.
 2. Close the design.
 3. Reopen the saved design.
-4. Open Peripheral Manager.
-5. Review the device assignment for the IWS component.	1. The IWS device is still assigned to the IWS component.
-2. The device connection status is correct (connected if device is still on network).
-3. No re-commissioning is required.	Manual	Designer > Components > IWS > Persistence
+4. Select the IWS component and review the inventory item name in Right Sidebar > Properties drawer.
+5. Deploy the design to the Core.	1. The inventory item name is retained exactly as saved.
+2. On deploy, the device auto-connects (device name matches inventory item name).
+3. No manual reassignment is required.	Manual	Designer > Components > IWS > Persistence
 IWS - Verify design with IWS component can be saved as a new file	1. Open "Q-SYS Designer" software.
 2. Create a new design.
 3. Add an IWS component to the canvas with full configuration (name, LED settings, zones, wiring).	1. Save the design via Menu Bar > File > Save As.
@@ -52,9 +52,9 @@ IWS - Verify design with IWS component can be saved as a new file	1. Open "Q-SYS
 IWS - Verify multiple IWS components persist independently	1. Open "Q-SYS Designer" software.
 2. Create a new design.
 3. Add three IWS components to the canvas.
-4. Configure each with unique names, LED settings, and detection zones.	1. Save the design via Menu Bar > File > Save.
+4. Configure each with unique names and LED settings.	1. Save the design via Menu Bar > File > Save.
 2. Close the design.
 3. Reopen the saved design.
 4. Review each IWS component's configuration individually.	1. Each of the three IWS components retains its unique configuration.
-2. Component names, LED settings, and detection zones are independent and correct.
+2. Component names and LED settings are independent and correct.
 3. No cross-contamination of settings between components.	Manual	Designer > Components > IWS > Persistence

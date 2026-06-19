@@ -1,0 +1,64 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify IWS device can be dynamically paired	1. Open "Q-SYS Designer" software.
+2. Create a new design with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. Deploy the design to the Core.	1. Open the dynamic pairing interface in Core Manager or Designer.
+2. Select the IWS device from the available devices list.
+3. Initiate dynamic pairing.
+4. Wait for pairing to complete.
+5. Verify the device status.	1. The IWS device is successfully paired to the component.
+2. The device reaches "OK" state.
+3. Sensor data flows from the device to the component.	Manual	Designer > Components > IWS > Dynamic Pairing
+IWS - Verify IWS device can be unpaired	1. Open "Q-SYS Designer" software.
+2. Design deployed to Core with an IWS component.
+3. IWS device is dynamically paired and in "OK" state.	1. Open the dynamic pairing interface in Core Manager or Designer.
+2. Select the currently paired device.
+3. Initiate unpairing/removal.
+4. Confirm the action if prompted.
+5. Verify the component and device status.	1. The device is successfully unpaired from the component.
+2. The component shows an unassigned/disconnected state.
+3. Sensor data stops flowing.
+4. The device is available for pairing to another component.	Manual	Designer > Components > IWS > Dynamic Pairing
+IWS - Verify behavior when two components paired to same physical device	1. Open "Q-SYS Designer" software.
+2. Create a design with two IWS components ("IWS-1" and "IWS-2").
+3. IWS device is on the network, inventory item names configured.
+4. Deploy the design to the Core.
+5. One physical IWS device is available on the network.	1. In Core Manager or Designer, pair "IWS-1" to the physical IWS device.
+2. Verify "IWS-1" is in "OK" state.
+3. Attempt to pair "IWS-2" to the same physical IWS device.
+4. Observe the behavior.	1. The system either prevents the duplicate pairing with a clear error, OR
+2. The second pairing succeeds and the first component becomes unpaired.
+3. No crash or undefined behavior occurs.
+4. The final state is clearly communicated to the user.	Manual	Designer > Components > IWS > Dynamic Pairing
+IWS - Verify pairings can be swapped between two devices	1. Open "Q-SYS Designer" software.
+2. Create a design with two IWS components ("IWS-1" and "IWS-2").
+3. Two physical IWS devices are on the network ("IWS-0123" and "IWS-abcd").
+4. Deploy the design to the Core.
+5. "IWS-1" is paired to "IWS-0123" and "IWS-2" is paired to "IWS-abcd".	1. Verify both pairings are active and in "OK" state.
+2. In Core Manager or Designer, swap the pairings in a single edit: pair "IWS-1" to "IWS-abcd" and "IWS-2" to "IWS-0123".
+3. Apply the changes.
+4. Wait for both devices to connect.	1. "IWS-1" is now paired to "IWS-abcd" and receiving its sensor data.
+2. "IWS-2" is now paired to "IWS-0123" and receiving its sensor data.
+3. Both devices reach "OK" state.
+4. No orphaned or conflicting pairings remain.	Manual	Designer > Components > IWS > Dynamic Pairing
+IWS - Verify pairing via device name (hostname)	1. Open "Q-SYS Designer" software.
+2. Create a design with an IWS component.
+3. IWS device is on the network with a known hostname (e.g., "IWS-LobbyA").
+4. Deploy the design to the Core.	1. Open the dynamic pairing interface in Core Manager or Designer.
+2. Select or enter the device by its hostname ("IWS-LobbyA").
+3. Initiate dynamic pairing.
+4. Wait for pairing to complete.	1. The device is successfully paired using its hostname.
+2. The device reaches "OK" state.
+3. Sensor data flows correctly.
+4. If the device IP changes, the pairing remains valid via hostname resolution.	Manual	Designer > Components > IWS > Dynamic Pairing
+IWS - Verify pairing via switch port (LLDP port information)	1. Open "Q-SYS Designer" software.
+2. Create a design with an IWS component.
+3. IWS device is connected to a managed switch with LLDP enabled.
+4. The switch port information is known (e.g., "Switch1/Port24").
+5. Deploy the design to the Core.	1. Open the dynamic pairing interface in Core Manager or Designer.
+2. Select or enter the device by its switch port / LLDP port information.
+3. Initiate dynamic pairing.
+4. Wait for pairing to complete.	1. The device is successfully paired using LLDP port information.
+2. The device reaches "OK" state.
+3. Sensor data flows correctly.
+4. If the device is replaced on the same port, the new device pairs automatically.	Manual	Designer > Components > IWS > Dynamic Pairing

@@ -1,0 +1,38 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify LED configuration persists through deploy cycle	1. Open "Q-SYS Designer" software.
+2. Create a new design with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. Configure the LED ring to color blue, brightness 50%.	1. Deploy the design to the Core (F5).
+2. Verify the LED configuration is active on the device.
+3. Disconnect from the Core (F7).
+4. Emulate the design (F6).
+5. Change the LED ring to color red, brightness 100%.
+6. Disconnect from emulation (F7).
+7. Deploy the design to the Core again (F5).
+8. Verify the LED configuration on the device.	1. After step 8, the LED ring is set to red at 100% brightness.
+2. The values match those set in emulation (step 5), not the original values (step 4).
+3. The physical device LED ring reflects the updated configuration.	Manual	Designer > Components > IWS > Deployment Persistence
+IWS - Verify detection zone settings persist through deploy cycle	1. Open "Q-SYS Designer" software.
+2. Create a new design with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. Deploy the design to the Core (F5).
+5. Configure detection zone sensitivity to 50% and range to Medium via the device Web UI.	1. Verify detection zone settings are active on the device.
+2. Open the device Web UI and change detection zone sensitivity to 80% and range to High.
+3. Disconnect from the Core (F7).
+4. Deploy the design to the Core again (F5).
+5. Verify detection zone settings on the device.	1. After step 5, sensitivity is 80% and range is High.
+2. The values match those set in QPM (step 2), not the original values.
+3. Design deployment does not overwrite detection zone settings configured via the device Web UI.	Manual	Designer > Components > IWS > Deployment Persistence
+IWS - Verify component properties persist through deploy cycle	1. Open "Q-SYS Designer" software.
+2. Create a new design with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. Set component name to "Lobby Sensor" and temperature unit to °C.	1. Deploy the design to the Core (F5).
+2. Verify component properties are active.
+3. Disconnect from the Core (F7).
+4. Emulate the design (F6).
+5. Change the component name to "Conference Room" and temperature unit to °F.
+6. Disconnect from emulation (F7).
+7. Deploy the design to the Core again (F5).
+8. Verify component properties.	1. After step 8, the component name is "Conference Room" and temperature unit is °F.
+2. The values match those set in emulation (step 5), not the original values (step 4).
+3. The deployed design reflects all updated properties.	Manual	Designer > Components > IWS > Deployment Persistence

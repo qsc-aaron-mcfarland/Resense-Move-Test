@@ -1,0 +1,32 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify IWS device works with redundant core system	1. Open "Q-SYS Designer" software.
+2. Create a design with a redundant Core pair (active and backup).
+3. Add an IWS component to the canvas.
+4. IWS device is on the network, inventory item name matches device name in Configurator.
+5. Deploy the design to the active Core.	1. Verify the IWS device is in "OK" state on the active Core.
+2. Verify sensor data is flowing from the IWS device.
+3. Confirm the backup Core is in standby and aware of the IWS device.	1. The IWS device operates normally with the redundant core system.
+2. Sensor data flows correctly to the active Core.
+3. The backup Core has the IWS device in its peripheral inventory.	Manual	Designer > Components > IWS > Core Redundancy
+IWS - Verify IWS connects to backup core on active core failure	1. Open "Q-SYS Designer" software.
+2. Design with redundant Core pair is deployed.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. IWS device is in "OK" state on the active Core.
+5. Sensor data is flowing normally.	1. Simulate an active Core failure (power off or network disconnect the active Core).
+2. Wait for the backup Core to take over as active.
+3. Observe the IWS device status on the new active Core.
+4. Verify sensor data flow resumes.	1. The backup Core takes over as the active Core.
+2. The IWS device connects to the new active Core.
+3. The IWS device reaches "OK" state without manual intervention.
+4. Sensor data resumes flowing within a reasonable failover time.	Manual	Designer > Components > IWS > Core Redundancy
+IWS - Verify IWS connects to backup core on graceful switchover	1. Open "Q-SYS Designer" software.
+2. Design with redundant Core pair is deployed.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. IWS device is in "OK" state on the active Core.
+5. Sensor data is flowing normally.	1. Initiate a graceful switchover from the active Core to the backup Core.
+2. Wait for the switchover to complete.
+3. Observe the IWS device status on the new active Core.
+4. Verify sensor data flow.	1. The graceful switchover completes successfully.
+2. The IWS device connects to the new active Core.
+3. The IWS device reaches "OK" state without manual intervention.
+4. Sensor data resumes with minimal interruption.	Manual	Designer > Components > IWS > Core Redundancy
