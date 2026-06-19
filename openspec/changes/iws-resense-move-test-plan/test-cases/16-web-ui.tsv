@@ -1,0 +1,56 @@
+Title	Preconditions	Steps	Expected Results	Execution Type	Section
+IWS - Verify IR frame renders in Web UI	1. IWS device is on the network and accessible via IP address.
+2. Open the device Web UI in a web browser.
+3. Navigate to the detection zone / live view page.	1. Observe the IR frame view area.
+2. Verify the live thermal image is displayed within the circular lens boundary (red border indicates physical FOV edge).
+3. Wait for the auto-refresh cycle to complete.
+4. Verify the frame updates.	1. The IR frame renders a live thermal image of the sensor's field of view.
+2. The circular lens boundary is clearly visible (red area outside the FOV).
+3. The frame refreshes automatically without manual intervention.
+4. No rendering artifacts or blank frames appear.	Manual	Web UI > IR Frame / Detection Zones
+IWS - Verify color palette switching in Web UI	1. IWS device is on the network and accessible via IP address.
+2. Open the device Web UI in a web browser.
+3. Navigate to the detection zone / live view page.
+4. The IR frame is rendering with the default color palette.	1. Click the color palette dropdown.
+2. Select the rainbow/jet palette. Verify the IR frame updates to use the new colors.
+3. Select the hot/yellow palette. Verify the IR frame updates.
+4. Select the grayscale palette. Verify the IR frame updates.
+5. Select the blue-to-red (cool-warm) palette. Verify the IR frame updates.	1. Each palette option renders the IR frame with distinct, correct color mapping.
+2. Switching palettes updates the view immediately (on next frame refresh).
+3. Thermal intensity gradients are clearly distinguishable in each palette.
+4. No rendering errors or fallback to a default palette on switch.	Manual	Web UI > IR Frame / Detection Zones
+IWS - Verify color palette selection persists on page reload	1. IWS device is on the network and accessible via IP address.
+2. Open the device Web UI in a web browser.
+3. Navigate to the detection zone / live view page.	1. Select a non-default color palette (e.g., grayscale).
+2. Verify the IR frame renders with the selected palette.
+3. Refresh the browser page (F5).
+4. Observe the color palette selection and IR frame rendering.	1. After page reload, the previously selected color palette is still active.
+2. The IR frame renders with the persisted palette, not the default.
+3. The dropdown shows the correct palette as selected.	Manual	Web UI > IR Frame / Detection Zones
+IWS - Verify layout persistence for multi-sensor group	1. Two or more IWS devices are on the network, grouped together in the Web UI.
+2. Open the Web UI for the sensor group.
+3. A spatial layout (arrangement of sensors relative to each other) has been configured.	1. Document the current multi-sensor layout arrangement.
+2. Close the browser and reopen the Web UI for the sensor group.
+3. Verify the layout is the same as documented.
+4. Power cycle one of the sensors in the group.
+5. Reopen the Web UI for the sensor group and verify the layout.	1. The multi-sensor layout persists after closing and reopening the Web UI.
+2. The spatial arrangement of sensors is identical to what was configured.
+3. Power cycling a single sensor does not affect the group layout.
+4. No sensors are displaced or missing from the layout view.	Manual	Web UI > Multi-Sensor Layout
+IWS - Verify sensor grouping logic in Web UI	1. Two or more IWS devices are on the network and accessible.
+2. Open the device Web UI in a web browser.	1. Create a new group containing two or more sensors.
+2. Verify all selected sensors appear in the group.
+3. Remove one sensor from the group.
+4. Verify the removed sensor is no longer part of the group.
+5. Add the sensor back to the group.
+6. Verify the sensor reappears in the group.	1. Sensors can be grouped together in the Web UI.
+2. The group reflects the correct membership after add/remove operations.
+3. Grouped sensors share a combined coverage view.
+4. Ungrouped sensors operate independently.	Manual	Web UI > Multi-Sensor Layout
+IWS - Verify grouped sensors show combined zone coverage	1. Two or more IWS devices are grouped together in the Web UI.
+2. Detection zones are configured on each sensor.	1. Open the group view in the Web UI.
+2. Verify that each sensor's detection zone is visible in the combined layout.
+3. Verify that overlapping coverage areas between sensors are represented correctly.	1. All grouped sensors' detection zones are visible in a single combined view.
+2. The spatial relationship between sensors is accurately represented.
+3. Overlapping zones are clearly identifiable.
+4. Person counts from the group reflect the combined coverage.	Manual	Web UI > Multi-Sensor Layout
