@@ -1,12 +1,15 @@
 Title	Preconditions	Steps	Expected Results	Execution Type	Section
 IWS - Verify configuration resets to default on factory reset	1. Open "Q-SYS Designer" software.
-2. IWS device is commissioned and connected.
-3. Device has non-default configuration (custom hostname, LED settings, detection zones, network settings, etc.).	1. Document the current non-default configuration values.
-2. Perform a factory reset on the IWS device (via QPM, device web interface, or hardware button).
-3. Wait for the device to complete the reset and come back online.
+2. Design deployed to Core with an IWS component.
+3. IWS device is on the network, inventory item name matches device name in Configurator.
+4. IWS device is in "OK" state with non-default configuration applied (custom hostname, LED settings, detection zones, network settings, etc.).	1. Perform a factory reset on the IWS device (via QPM, device web interface, or hardware button).
+2. Wait for the device to complete the reset and reboot.
+3. Observe the device status in the inventory.
 4. Review all configuration values on the device.	1. All configuration values return to factory defaults.
-2. The hostname reverts to the default.
+2. The hostname reverts to the default device name.
 3. Network settings revert to defaults (DHCP or default static).
 4. LED settings, detection zones, and sensor configuration revert to defaults.
-5. The device requires re-commissioning after factory reset.
-6. No residual custom configuration remains.	Manual	Designer > Components > IWS > Factory Reset
+5. The device no longer has a relationship with the Core and requires re-commissioning from scratch.
+6. No residual custom configuration remains on the device.
+7. The Designer component reports the device as "Missing" with no values populated from the device.
+8. The device appears as an unpaired/unmatched device on the Q-SYS network.	Manual	Designer > Components > IWS > Factory Reset
