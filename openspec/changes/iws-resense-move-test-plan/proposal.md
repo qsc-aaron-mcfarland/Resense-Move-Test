@@ -11,10 +11,17 @@ The U115 Resense Move (IWS) — Phase 1 brings the Distech Resense Move multi-se
 - Component basics (inventory, schematic, properties)
 - Sensor technologies (occupancy, people count, luminosity, temperature, humidity, TVOC, sound level)
 - LED ring configuration (color, brightness, patterns)
-- Peripheral Manager workflows (discovery, commissioning, firmware update)
+- Peripheral Manager / Configurator workflows (discovery, commissioning, firmware update)
+- QPM management (hostname, network, NTP, certificates, security policies)
 - Control pins (sensor data I/O, status communication)
 - Detection / presence zones
-- Persistence (save/close/reopen design)
+- Persistence (save/close/reopen design) and deployment persistence (deploy/emulate cycles)
+- LLDP / network discovery (single device and daisy-chain topologies)
+- Core redundancy (failover, graceful switchover)
+- Dynamic pairing (pair/unpair, hostname-based, LLDP port-based)
+- Factory reset, power cycles, reboots, and deploy resilience
+- Firmware interruption recovery (anti-brick)
+- IWS Sensor Web UI (browser-based thermal frame viewer, zone editing, multi-sensor canvas)
 
 ## References
 
@@ -28,3 +35,4 @@ The U115 Resense Move (IWS) — Phase 1 brings the Distech Resense Move multi-se
 - Unit tests, API-level assertions, code instrumentation
 - Reflect integration testing (separate scope)
 - Bluetooth qualification testing
+- Distech native web interface testing (only the Q-SYS-hosted IWS Sensor Web UI is in scope)

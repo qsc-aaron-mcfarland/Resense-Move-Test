@@ -106,14 +106,65 @@ IWS - Verify control pin wiring persists after save and reopen	Persistence	IWS-S
 IWS - Verify Peripheral Manager assignment persists after save and reopen	Persistence	IWS-SW-2, IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	
 IWS - Verify design with IWS component can be saved as a new file	Persistence	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	
 IWS - Verify multiple IWS components persist independently	Persistence	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	
-IWS - Verify LLDP is enabled on single Resense Move	LLDP / Network				LLDP discovery for single device
-IWS - Verify single Resense Move network topology in Q-SYS	LLDP / Network				Topology view validation
-IWS - Verify daisy-chained Resense Move devices are discovered	LLDP / Network				Daisy-chain discovery
-IWS - Verify LLDP topology shows daisy-chain order	LLDP / Network				Chain order in topology
-IWS - Verify sensor data flows through daisy-chained devices	LLDP / Network				Independent sensor data per device
-IWS - Verify daisy-chain resilience when middle device is disconnected	LLDP / Network				Middle device removal
-IWS - Verify daisy-chain recovery when disconnected device is reconnected	LLDP / Network				Chain recovery
-IWS - Verify LLDP updates when daisy-chain order changes	LLDP / Network				Topology update after reorder
-IWS - Verify maximum daisy-chain depth	LLDP / Network				Max chain length
-IWS - Verify LED control works on all daisy-chained devices	LLDP / Network				LED control through chain
-IWS - Verify firmware update on daisy-chained devices	LLDP / Network				Firmware update through chain
+IWS - Verify LLDP information on single Resense Move	LLDP / Network	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	LLDP discovery for single device
+IWS - Verify single Resense Move network topology in Q-SYS	LLDP / Network	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	Topology view validation
+IWS - Verify daisy-chained Resense Move devices are discovered	LLDP / Network	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	Daisy-chain discovery
+IWS - Verify LLDP topology shows daisy-chain order	LLDP / Network	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	Chain order in topology
+IWS - Verify sensor data flows through daisy-chained devices	LLDP / Network	IWS-ST-1	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Independent sensor data per device
+IWS - Verify daisy-chain resilience when middle device is disconnected	LLDP / Network	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	Middle device removal
+IWS - Verify daisy-chain recovery when disconnected device is reconnected	LLDP / Network	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	Chain recovery
+IWS - Verify LLDP updates when daisy-chain order changes	LLDP / Network	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	Topology update after reorder
+IWS - Verify maximum daisy-chain depth	LLDP / Network	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	Max chain length
+IWS - Verify LED control works on all daisy-chained devices	LLDP / Network	IWS-LED-1	QSYSDEV-51745	LED Configuration and Presets IWS-LED-1/2	LED control through chain
+IWS - Verify firmware update on daisy-chained devices	LLDP / Network	IWS-SW-2	QSYSDEV-53101	Implement QFU (Q-SYS Firmware Updates) for resense	Firmware update through chain
+IWS - Verify IWS device works with redundant core system	Core Redundancy	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Active core operation
+IWS - Verify IWS connects to backup core on active core failure	Core Redundancy	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Failover to backup
+IWS - Verify IWS connects to backup core on graceful switchover	Core Redundancy	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Graceful switchover
+IWS - Verify IWS device can be dynamically paired	Dynamic Pairing	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	
+IWS - Verify IWS device can be unpaired	Dynamic Pairing	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	
+IWS - Verify behavior when two components paired to same physical device	Dynamic Pairing	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	Negative: duplicate pairing
+IWS - Verify pairings can be swapped between two devices	Dynamic Pairing	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	
+IWS - Verify pairing via device name (hostname)	Dynamic Pairing	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	Hostname-based pairing
+IWS - Verify pairing via switch port (LLDP port information)	Dynamic Pairing	IWS-PM-1	QSYSDEV-53099	Implement QDP (Q-SYS Discovery Protocol) on resense	LLDP port-based pairing
+IWS - Verify configuration resets to default on factory reset	Factory Reset	IWS-RB-1	QSYSDEV-51757	Reset Button IWS-RB-1	Full factory reset validation
+IWS - Verify device reaches OK state after multiple power cycles	Power & Reboots	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Reliability: repeated power cycles
+IWS - Verify device reaches OK state after multiple reboots	Power & Reboots	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Reliability: repeated reboots via QPM
+IWS - Verify device recovers after Ethernet disconnection	Power & Reboots	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Network disconnect/reconnect
+IWS - Verify device reaches OK state after multiple design deployments	Deploy Resilience	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Repeated deploy/disconnect cycles
+IWS - Verify device recovers from interrupted firmware update (power loss)	Firmware Interruption	IWS-SW-2	QSYSDEV-53101	Implement QFU (Q-SYS Firmware Updates) for resense	Anti-brick; also QSYSDEV-59810
+IWS - Verify LED configuration persists through deploy cycle	Deployment Persistence	IWS-SW-2, IWS-LED-1	QSYSDEV-51745	LED Configuration and Presets IWS-LED-1/2	Deploy/emulate/redeploy cycle
+IWS - Verify detection zone settings persist through deploy cycle	Deployment Persistence	IWS-SW-2, IWS-ST-3	QSYSDEV-51747	People Counting and Presence Detection Reporting & Configuration IWS-ST-2/3	Web UI zone config survives deploy
+IWS - Verify component properties persist through deploy cycle	Deployment Persistence	IWS-SW-2	QSYSDEV-53104	Implement Control of IWS - device_lib / control_lib / designer components	Emulate changes persist on redeploy
+IWS - Verify hostname can be changed via QPM	QPM Management	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	
+IWS - Verify network settings can be configured via QPM	QPM Management	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	Static IP, netmask, gateway
+IWS - Verify NTP settings can be configured via QPM	QPM Management	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	
+IWS - Verify device certificate management via QPM	QPM Management	IWS-SW-2	QSYSDEV-51760	Security IWS-SW-2	CSR generation and cert install
+IWS - Verify secure communication management via QPM	QPM Management	IWS-SW-2	QSYSDEV-51760	Security IWS-SW-2	TOFU, trusted/declined lists
+IWS - Verify 802.1X management via QPM	QPM Management	IWS-SW-2	QSYSDEV-51760	Security IWS-SW-2	Port-based authentication
+IWS - Verify security policy management via QPM	QPM Management	IWS-SW-2	QSYSDEV-51760	Security IWS-SW-2	Password/session policies
+IWS - Verify system log and state download via QPM	QPM Management	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	Diagnostics download
+IWS - Verify device reboot via QPM	QPM Management	IWS-PM-1	QSYSDEV-53100	Implement QPM (Q-SYS Peripheral Manager) on resense (IWS-PM-1)	
+IWS - Verify QPM re-authentication after password change	QPM Management	IWS-SW-2	QSYSDEV-51760	Security IWS-SW-2	See also QSYSDEV-60405
+IWS - Verify No Sensors Available state	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Empty state
+IWS - Verify Default View with single sensor	Web UI	IWS-ST-3, IWS-ST-5	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Single tab default layout
+IWS - Verify Edit Regions mode entry and settings panel	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Settings panel controls
+IWS - Verify Color Scale selection in Edit Regions	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Thermal palette options
+IWS - Verify People Count Zone color picker	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Zone color customization
+IWS - Verify People Count Zone polygon editing	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Drag handles to reshape zone
+IWS - Verify Presence Zone add and remove	Web UI	IWS-ST-3, IWS-ST-5	QSYSDEV-51747	People Counting and Presence Detection Reporting & Configuration IWS-ST-2/3	Up to 5 zones
+IWS - Verify Presence Zone maximum limit (5 zones)	Web UI	IWS-ST-3	QSYSDEV-51747	People Counting and Presence Detection Reporting & Configuration IWS-ST-2/3	Boundary: max 5
+IWS - Verify No Presence Regions warning state	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Info message when no zones
+IWS - Verify Region Outside Zone validation	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Visual feedback for invalid placement
+IWS - Verify Reset Zones confirmation dialog	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Destructive action confirmation
+IWS - Verify Image Background Noise toggle	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Noise filter toggle
+IWS - Verify Dark Mode toggle	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Theme toggle
+IWS - Verify Multi-Sensor view with sensor group	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Multiple tab group view
+IWS - Verify sensor arrangement drag and positioning	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Spatial layout editing
+IWS - Verify sensor rotation, scale, and opacity controls	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Per-sensor transform properties
+IWS - Verify Reset Multi Sensor Canvas	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Reset layout to default grid
+IWS - Verify multi-sensor layout persistence	Web UI	IWS-ST-3, IWS-SW-2	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Layout survives close/reopen
+IWS - Verify sensor grouping in Multi-Sensor view	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Group dropdown and member list
+IWS - Verify Disabled State for offline sensors	Web UI	IWS-ST-3, IWS-ST-10	QSYSDEV-51756	Fault Status IWS-ST-10	Gray placeholder for offline sensors
+IWS - Verify popout card view	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Compact card overlay
+IWS - Verify Single/Multiple tab switching	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Tab navigation
+IWS - Verify zoom and fullscreen controls	Web UI	IWS-ST-3	QSYSDEV-56207	IWS control panel (QDS) UX Implementation	Zoom in/out, reset, fullscreen

@@ -2,17 +2,28 @@
 
 ## Test Organization
 
-Test cases are organized into 7 sections under `Designer > Components > IWS`:
+Test cases are organized into 16 sections:
 
 | # | Section | SRD Coverage | Approx Cases |
 |---|---------|-------------|--------------|
-| 1 | Component Basics | IWS-SW-1, IWS-SW-2 | ~12 |
-| 2 | Sensor Technologies | IWS-ST-1 through IWS-ST-7 | ~18 |
-| 3 | LED Configuration | IWS-LED-1 | ~10 |
-| 4 | Peripheral Manager | IWS-PM-1, IWS-RB-1, IWS-SW-2 | ~15 |
+| 1 | Component Basics | IWS-SW-1, IWS-SW-2, IWS-COMP-2, IWS-DI-1, IWS-LED-2, IWS-BLE-1, IWS-ST-2, IWS-ST-10 | ~17 |
+| 2 | Sensor Technologies | IWS-ST-1 through IWS-ST-10 | ~18 |
+| 3 | LED Configuration | IWS-LED-1, IWS-CP-1 | ~12 |
+| 4 | Peripheral Manager / Configurator | IWS-PM-1, IWS-SW-2 | ~8 |
+| 4b | QPM Management | IWS-PM-1 | ~5 |
 | 5 | Control Pins | IWS-CP-1 | ~17 |
 | 6 | Detection Zones | IWS-ST-3, IWS-ST-5 | ~11 |
 | 7 | Persistence | IWS-SW-2 | ~6 |
+| 7b | Deployment Persistence | IWS-SW-2 | ~3 |
+| 8 | Traceability Matrix | — | — |
+| 9 | LLDP / Network Discovery | IWS-PM-1 | ~5 |
+| 10 | Core Redundancy | IWS-SW-2 | ~3 |
+| 11 | Dynamic Pairing | IWS-PM-1 | ~5 |
+| 12 | Factory Reset | IWS-PM-1, IWS-RB-1 | ~1 |
+| 13 | Power Cycles & Reboots | IWS-SW-2 | ~3 |
+| 14 | Deploy Resilience | IWS-SW-2 | ~1 |
+| 15 | Firmware Interruption | IWS-SW-2 | ~1 |
+| 16 | Web UI (IWS Sensor Web App) | IWS-ST-3, IWS-ST-5, IWS-LED-1 | ~17 |
 
 ## Output Format
 
